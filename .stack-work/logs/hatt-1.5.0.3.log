@@ -13,6 +13,47 @@ src/Data/Logic/Propositional/Tables.hs:42:31: warning: [-Wdeprecations]
 Preprocessing executable 'hatt' for hatt-1.5.0.3...
 [1 of 1] Compiling Main             ( src/hatt.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/hatt/hatt-tmp/Main.o )
 Linking .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/hatt/hatt ...
+Running Haddock for hatt-1.5.0.3...
+Preprocessing library hatt-1.5.0.3...
+
+src/Data/Logic/Propositional/Tables.hs:42:31: warning: [-Wdeprecations]
+    In the use of ‘fold’ (imported from Data.Map):
+    Deprecated: "As of version 0.5, replaced by 'foldr'."
+Haddock coverage:
+  36% (  9 / 25) in 'Data.Logic.Propositional.Core'
+  Missing documentation for:
+    Module header
+    Var (src/Data/Logic/Propositional/Core.hs:15)
+     (src/Data/Logic/Propositional/Core.hs:18)
+    Expr (src/Data/Logic/Propositional/Core.hs:21)
+     (src/Data/Logic/Propositional/Core.hs:29)
+     (src/Data/Logic/Propositional/Core.hs:37)
+     (src/Data/Logic/Propositional/Core.hs:40)
+    randomExpr (src/Data/Logic/Propositional/Core.hs:43)
+    randomExpr' (src/Data/Logic/Propositional/Core.hs:46)
+    randomBin (src/Data/Logic/Propositional/Core.hs:55)
+    randomNeg (src/Data/Logic/Propositional/Core.hs:59)
+    randomVar (src/Data/Logic/Propositional/Core.hs:62)
+    Mapping (src/Data/Logic/Propositional/Core.hs:65)
+    showBinaryConnective (src/Data/Logic/Propositional/Core.hs:134)
+    showBC (src/Data/Logic/Propositional/Core.hs:138)
+    showBCA (src/Data/Logic/Propositional/Core.hs:141)
+ 100% (  4 /  4) in 'Data.Logic.Propositional.NormalForms'
+  50% (  1 /  2) in 'Data.Logic.Propositional.Parser'
+  Missing documentation for:
+    Module header
+  83% (  5 /  6) in 'Data.Logic.Propositional.Tables'
+  Missing documentation for:
+    Printer (src/Data/Logic/Propositional/Tables.hs:20)
+  82% ( 14 / 17) in 'Data.Logic.Propositional'
+  Missing documentation for:
+    Expr (src/Data/Logic/Propositional/Core.hs:21)
+    Var (src/Data/Logic/Propositional/Core.hs:15)
+    Mapping (src/Data/Logic/Propositional/Core.hs:65)
+Documentation created:
+.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/hatt/index.html,
+.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/hatt/hatt.txt
+Preprocessing executable 'hatt' for hatt-1.5.0.3...
 Installing library in
 /Users/danielrodriguezchavarria/SAT-Pol/.stack-work/install/x86_64-osx/lts-8.22/8.0.2/lib/x86_64-osx-ghc-8.0.2/hatt-1.5.0.3-GWtyu7iSUZM8OxhcENGMFZ
 Installing executable(s) in

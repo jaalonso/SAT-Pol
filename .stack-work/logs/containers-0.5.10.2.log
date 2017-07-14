@@ -34,6 +34,146 @@ Preprocessing library containers-0.5.10.2...
 [31 of 33] Compiling Data.IntMap.Strict ( Data/IntMap/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap/Strict.o )
 [32 of 33] Compiling Data.IntMap      ( Data/IntMap.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap.o )
 [33 of 33] Compiling Data.Graph       ( Data/Graph.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Graph.o )
+Running Haddock for containers-0.5.10.2...
+Preprocessing library containers-0.5.10.2...
+Haddock coverage:
+ 100% (  3 /  3) in 'Utils.Containers.Internal.StrictPair'
+  20% (  1 /  5) in 'Utils.Containers.Internal.StrictMaybe'
+  Missing documentation for:
+    MaybeS (Utils/Containers/Internal/StrictMaybe.hs:15)
+    maybeS (Utils/Containers/Internal/StrictMaybe.hs:21)
+    toMaybe (Utils/Containers/Internal/StrictMaybe.hs:25)
+    toMaybeS (Utils/Containers/Internal/StrictMaybe.hs:29)
+  50% (  1 /  2) in 'Utils.Containers.Internal.StrictFold'
+  Missing documentation for:
+    Module header
+ 100% (  3 /  3) in 'Utils.Containers.Internal.PtrEquality'
+  40% (  2 /  5) in 'Utils.Containers.Internal.BitUtil'
+  Missing documentation for:
+    shiftLL (Utils/Containers/Internal/BitUtil.hs:75)
+    shiftRL (Utils/Containers/Internal/BitUtil.hs:75)
+    wordSize (Utils/Containers/Internal/BitUtil.hs:92)
+  75% (  6 /  8) in 'Utils.Containers.Internal.BitQueue'
+  Missing documentation for:
+    BitQueue (Utils/Containers/Internal/BitQueue.hs:80)
+    BitQueueB (Utils/Containers/Internal/BitQueue.hs:77)
+  95% ( 81 / 85) in 'Data.Set.Internal'
+  Missing documentation for:
+    bin (Data/Set/Internal.hs:1596)
+    balanced (Data/Set/Internal.hs:1743)
+    link (Data/Set/Internal.hs:1379)
+    merge (Data/Set/Internal.hs:1405)
+ 100% ( 83 / 83) in 'Data.Set'
+  93% ( 94 /101) in 'Data.Sequence.Internal'
+  Missing documentation for:
+    Elem (Data/Sequence/Internal.hs:1085)
+    FingerTree (Data/Sequence/Internal.hs:848)
+    Node (Data/Sequence/Internal.hs:1028)
+    Digit (Data/Sequence/Internal.hs:939)
+    Sized (Data/Sequence/Internal.hs:313)
+    MaybeForce (Data/Sequence/Internal.hs:321)
+    liftA2Seq (Data/Sequence/Internal.hs:505)
+ 100% ( 94 / 94) in 'Data.Sequence'
+  94% ( 16 / 17) in 'Data.Tree'
+  Missing documentation for:
+    Forest (Data/Tree.hs:97)
+  93% (180 /194) in 'Data.Map.Internal'
+  Missing documentation for:
+    findMax (Data/Map/Internal.hs:1639)
+    AreWeStrict (Data/Map/Internal.hs:1151)
+    atKeyImpl (Data/Map/Internal.hs:1220)
+    atKeyPlain (Data/Map/Internal.hs:1348)
+    bin (Data/Map/Internal.hs:3957)
+    balance (Data/Map/Internal.hs:3866)
+    balanceL (Data/Map/Internal.hs:3905)
+    balanceR (Data/Map/Internal.hs:3930)
+    delta (Data/Map/Internal.hs:3831)
+    insertMax (Data/Map/Internal.hs:3724)
+    link (Data/Map/Internal.hs:3714)
+    link2 (Data/Map/Internal.hs:3740)
+    glue (Data/Map/Internal.hs:3752)
+    MaybeS (Utils/Containers/Internal/StrictMaybe.hs:15)
+  43% (  6 / 14) in 'Data.Map.Internal.Debug'
+  Missing documentation for:
+    Module header
+    showsTree (Data/Map/Internal/Debug.hs:59)
+    showsTreeHang (Data/Map/Internal/Debug.hs:72)
+    showWide (Data/Map/Internal/Debug.hs:85)
+    showsBars (Data/Map/Internal/Debug.hs:90)
+    node (Data/Map/Internal/Debug.hs:96)
+    withBar (Data/Map/Internal/Debug.hs:99)
+    withEmpty (Data/Map/Internal/Debug.hs:99)
+ 100% (  3 /  3) in 'Data.Map.Internal.DeprecatedShowTree'
+  99% (152 /153) in 'Data.Map.Lazy'
+  Missing documentation for:
+    findMax (Data/Map/Internal.hs:1639)
+ 100% ( 39 / 39) in 'Data.Map.Merge.Lazy'
+ 100% (  2 /  2) in 'Data.Map.Lazy.Merge'
+  99% (181 /182) in 'Data.Map.Strict.Internal'
+  Missing documentation for:
+    findMax (Data/Map/Internal.hs:1639)
+ 100% ( 35 / 35) in 'Data.Map.Merge.Strict'
+ 100% (  2 /  2) in 'Data.Map.Strict.Merge'
+  99% (152 /153) in 'Data.Map.Strict'
+  Missing documentation for:
+    findMax (Data/Map/Internal.hs:1639)
+ 100% (  7 /  7) in 'Data.Map'
+  93% ( 65 / 70) in 'Data.IntSet.Internal'
+  Missing documentation for:
+    Key (Data/IntSet/Internal.hs:263)
+    match (Data/IntSet/Internal.hs:1253)
+    suffixBitMask (Data/IntSet/Internal.hs:1216)
+    prefixBitMask (Data/IntSet/Internal.hs:1224)
+    bitmapOf (Data/IntSet/Internal.hs:1240)
+  99% ( 66 / 67) in 'Data.IntSet'
+  Missing documentation for:
+    Key (Data/IntSet/Internal.hs:263)
+  94% (174 /185) in 'Data.IntMap.Internal'
+  Missing documentation for:
+    Key (Data/IntSet/Internal.hs:263)
+    mergeWithKey' (Data/IntMap/Internal.hs:1273)
+    Mask (Data/IntMap/Internal.hs:355)
+    Prefix (Data/IntMap/Internal.hs:354)
+    Nat (Data/IntMap/Internal.hs:329)
+    natFromInt (Data/IntMap/Internal.hs:331)
+    intFromNat (Data/IntMap/Internal.hs:335)
+    link (Data/IntMap/Internal.hs:3121)
+    bin (Data/IntMap/Internal.hs:3133)
+    binCheckLeft (Data/IntMap/Internal.hs:3140)
+    binCheckRight (Data/IntMap/Internal.hs:3146)
+  67% (  2 /  3) in 'Data.IntMap.Internal.Debug'
+  Missing documentation for:
+    Module header
+  67% (  2 /  3) in 'Data.IntMap.Internal.DeprecatedDebug'
+  Missing documentation for:
+    Module header
+  99% (130 /131) in 'Data.IntMap.Lazy'
+  Missing documentation for:
+    Key (Data/IntSet/Internal.hs:263)
+ 100% ( 39 / 39) in 'Data.IntMap.Merge.Lazy'
+ 100% ( 35 / 35) in 'Data.IntMap.Merge.Strict'
+  99% (130 /131) in 'Data.IntMap.Strict'
+  Missing documentation for:
+    Key (Data/IntSet/Internal.hs:263)
+ 100% (  6 /  6) in 'Data.IntMap'
+ 100% ( 33 / 33) in 'Data.Graph'
+Warning: Data.Set.Internal: could not find link destinations for:
+    Size
+Warning: Data.Sequence.Internal: could not find link destinations for:
+    maybeRwhnf PQueue Rigid aptyMiddle mapMulFT rigidify applicativeTree cycleNTimes unrollPQ toPQ mergePQ
+Warning: Data.Map.Internal: could not find link destinations for:
+    Size unsafeIndex unsafeRangeSize mapAccumL
+Warning: Data.Map.Strict.Internal: could not find link destinations for:
+    Size mapAccumL
+Warning: Data.IntSet.Internal: could not find link destinations for:
+    Prefix Mask BitMap
+Warning: Data.IntMap.Internal: could not find link destinations for:
+    mapAccumL
+Warning: Data.IntMap.Strict: could not find link destinations for:
+    mapAccumL
+Documentation created:
+.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/containers/index.html,
+.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/containers/containers.txt
 Installing library in
 /Users/danielrodriguezchavarria/SAT-Pol/.stack-work/install/x86_64-osx/lts-8.22/8.0.2/lib/x86_64-osx-ghc-8.0.2/containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz
 Registering containers-0.5.10.2...

@@ -95,6 +95,457 @@ System/Console/Haskeline/InputT.hs:17:1: warning: [-Wunused-imports]
 [25 of 27] Compiling System.Console.Haskeline.Vi ( System/Console/Haskeline/Vi.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/System/Console/Haskeline/Vi.o )
 [26 of 27] Compiling System.Console.Haskeline ( System/Console/Haskeline.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/System/Console/Haskeline.o )
 [27 of 27] Compiling System.Console.Haskeline.IO ( System/Console/Haskeline/IO.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/System/Console/Haskeline/IO.o )
+Running Haddock for haskeline-0.7.4.0...
+Preprocessing library haskeline-0.7.4.0...
+
+System/Console/Haskeline/MonadException.hs:39:1: warning: [-Wdeprecations]
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead
+
+System/Console/Haskeline/MonadException.hs:44:1: warning: [-Wunused-imports]
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+
+System/Console/Haskeline/MonadException.hs:162:29: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+System/Console/Haskeline/MonadException.hs:162:57: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+System/Console/Haskeline/MonadException.hs:163:19: warning: [-Wdeprecations]
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+System/Console/Haskeline/MonadException.hs:164:40: warning: [-Wdeprecations]
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+System/Console/Haskeline/MonadException.hs:164:55: warning: [-Wdeprecations]
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+System/Console/Haskeline/MonadException.hs:165:29: warning: [-Wdeprecations]
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+System/Console/Haskeline/Term.hs:56:26: warning: [-Wdeprecations]
+    In the use of ‘isEmptyChan’
+    (imported from Control.Concurrent, but defined in Control.Concurrent.Chan):
+    Deprecated: "if you need this operation, use Control.Concurrent.STM.TChan instead.  See <http://ghc.haskell.org/trac/ghc/ticket/4154> for details"
+
+System/Console/Haskeline/Term.hs:129:16: warning: [-Wdeprecations]
+    In the use of ‘isEmptyChan’
+    (imported from Control.Concurrent, but defined in Control.Concurrent.Chan):
+    Deprecated: "if you need this operation, use Control.Concurrent.STM.TChan instead.  See <http://ghc.haskell.org/trac/ghc/ticket/4154> for details"
+Haddock coverage:
+   0% (  0 /  2) in 'System.Console.Haskeline.Recover'
+  Missing documentation for:
+    Module header
+    transliterateFailure (System/Console/Haskeline/Recover.hs:6)
+  62% ( 13 / 21) in 'System.Console.Haskeline.MonadException'
+  Missing documentation for:
+    catch (System/Console/Haskeline/MonadException.hs:100)
+    handle (System/Console/Haskeline/MonadException.hs:105)
+    catches (System/Console/Haskeline/MonadException.hs:108)
+    Handler (System/Console/Haskeline/MonadException.hs:117)
+    finally (System/Console/Haskeline/MonadException.hs:127)
+    throwIO (System/Console/Haskeline/MonadException.hs:130)
+    throwTo (System/Console/Haskeline/MonadException.hs:133)
+    bracket (System/Console/Haskeline/MonadException.hs:120)
+  29% (  6 / 21) in 'System.Console.Haskeline.Monads'
+  Missing documentation for:
+    Module header
+    runReaderT
+    runReaderT' (System/Console/Haskeline/Monads.hs:70)
+    asks (System/Console/Haskeline/Monads.hs:50)
+    StateT (System/Console/Haskeline/Monads.hs:73)
+    runStateT (System/Console/Haskeline/Monads.hs:100)
+    evalStateT' (System/Console/Haskeline/Monads.hs:124)
+    mapStateT (System/Console/Haskeline/Monads.hs:97)
+    gets (System/Console/Haskeline/Monads.hs:57)
+    modify (System/Console/Haskeline/Monads.hs:60)
+    update (System/Console/Haskeline/Monads.hs:63)
+    MonadReader (System/Console/Haskeline/Monads.hs:38)
+    MonadState (System/Console/Haskeline/Monads.hs:53)
+    runMaybeT
+    orElse (System/Console/Haskeline/Monads.hs:135)
+  35% ( 23 / 65) in 'System.Console.Haskeline.LineState'
+  Missing documentation for:
+    baseChar (System/Console/Haskeline/LineState.hs:83)
+    graphemesToString (System/Console/Haskeline/LineState.hs:125)
+    modifyBaseChar (System/Console/Haskeline/LineState.hs:86)
+    mapBaseChars (System/Console/Haskeline/LineState.hs:89)
+    Prefix (System/Console/Haskeline/LineState.hs:137)
+    Result (System/Console/Haskeline/LineState.hs:151)
+    Save (System/Console/Haskeline/LineState.hs:154)
+    listSave (System/Console/Haskeline/LineState.hs:158)
+    listRestore (System/Console/Haskeline/LineState.hs:161)
+    Move (System/Console/Haskeline/LineState.hs:164)
+    emptyIM (System/Console/Haskeline/LineState.hs:193)
+    replaceCharIM (System/Console/Haskeline/LineState.hs:232)
+    insertGraphemes (System/Console/Haskeline/LineState.hs:228)
+    deleteNext (System/Console/Haskeline/LineState.hs:210)
+    deletePrev (System/Console/Haskeline/LineState.hs:210)
+    skipLeft (System/Console/Haskeline/LineState.hs:217)
+    skipRight (System/Console/Haskeline/LineState.hs:217)
+    transposeChars (System/Console/Haskeline/LineState.hs:223)
+    goRightUntil (System/Console/Haskeline/LineState.hs:406)
+    goLeftUntil (System/Console/Haskeline/LineState.hs:406)
+    atStart (System/Console/Haskeline/LineState.hs:389)
+    atEnd (System/Console/Haskeline/LineState.hs:389)
+    beforeChar (System/Console/Haskeline/LineState.hs:396)
+    afterChar (System/Console/Haskeline/LineState.hs:396)
+    overChar (System/Console/Haskeline/LineState.hs:396)
+    deleteChar (System/Console/Haskeline/LineState.hs:276)
+    replaceChar (System/Console/Haskeline/LineState.hs:281)
+    pasteGraphemesBefore (System/Console/Haskeline/LineState.hs:287)
+    pasteGraphemesAfter (System/Console/Haskeline/LineState.hs:287)
+    enterCommandMode (System/Console/Haskeline/LineState.hs:297)
+    enterCommandModeRight (System/Console/Haskeline/LineState.hs:297)
+    insertFromCommandMode (System/Console/Haskeline/LineState.hs:307)
+    appendFromCommandMode (System/Console/Haskeline/LineState.hs:307)
+    withCommandMode (System/Console/Haskeline/LineState.hs:315)
+    startArg (System/Console/Haskeline/LineState.hs:339)
+    addNum (System/Console/Haskeline/LineState.hs:342)
+    applyArg (System/Console/Haskeline/LineState.hs:348)
+    applyCmdArg (System/Console/Haskeline/LineState.hs:355)
+    Message (System/Console/Haskeline/LineState.hs:359)
+    Password (System/Console/Haskeline/LineState.hs:367)
+    addPasswordChar (System/Console/Haskeline/LineState.hs:381)
+    deletePasswordChar (System/Console/Haskeline/LineState.hs:384)
+   0% (  0 / 12) in 'System.Console.Haskeline.Key'
+  Missing documentation for:
+    Module header
+    Key (System/Console/Haskeline/Key.hs:19)
+    Modifier (System/Console/Haskeline/Key.hs:22)
+    BaseKey (System/Console/Haskeline/Key.hs:36)
+    noModifier (System/Console/Haskeline/Key.hs:33)
+    simpleKey (System/Console/Haskeline/Key.hs:44)
+    simpleChar (System/Console/Haskeline/Key.hs:53)
+    metaChar (System/Console/Haskeline/Key.hs:53)
+    ctrlChar (System/Console/Haskeline/Key.hs:53)
+    metaKey (System/Console/Haskeline/Key.hs:47)
+    ctrlKey (System/Console/Haskeline/Key.hs:50)
+    parseKey (System/Console/Haskeline/Key.hs:100)
+  33% (  3 /  9) in 'System.Console.Haskeline.Prefs'
+  Missing documentation for:
+    Module header
+    CompletionType (System/Console/Haskeline/Prefs.hs:54)
+    BellStyle (System/Console/Haskeline/Prefs.hs:58)
+    EditMode (System/Console/Haskeline/Prefs.hs:61)
+    HistoryDuplicates (System/Console/Haskeline/Prefs.hs:64)
+    lookupKeyBinding (System/Console/Haskeline/Prefs.hs:123)
+  73% (  8 / 11) in 'System.Console.Haskeline.History'
+  Missing documentation for:
+    History (System/Console/Haskeline/History.hs:38)
+    emptyHistory (System/Console/Haskeline/History.hs:49)
+    addHistory (System/Console/Haskeline/History.hs:85)
+ 100% (  4 /  4) in 'System.Console.Haskeline.Directory'
+  62% (  8 / 13) in 'System.Console.Haskeline.Completion'
+  Missing documentation for:
+    Module header
+    Completion (System/Console/Haskeline/Completion.hs:34)
+    completeQuotedWord (System/Console/Haskeline/Completion.hs:119)
+    completeFilename (System/Console/Haskeline/Completion.hs:96)
+    filenameWordBreakChars (System/Console/Haskeline/Completion.hs:92)
+  26% (  7 / 27) in 'System.Console.Haskeline.Term'
+  Missing documentation for:
+    Module header
+    Term (System/Console/Haskeline/Term.hs:19)
+    drawLine (System/Console/Haskeline/Term.hs:27)
+    clearLine (System/Console/Haskeline/Term.hs:27)
+    RunTerm (System/Console/Haskeline/Term.hs:32)
+    flushEventQueue (System/Console/Haskeline/Term.hs:53)
+    EvalTerm (System/Console/Haskeline/Term.hs:86)
+    mapEvalTerm (System/Console/Haskeline/Term.hs:90)
+    Interrupt (System/Console/Haskeline/Term.hs:95)
+     (System/Console/Haskeline/Term.hs:98)
+    CommandMonad (System/Console/Haskeline/Term.hs:102)
+     (System/Console/Haskeline/Term.hs:106)
+    matchInit (System/Console/Haskeline/Term.hs:113)
+    Event (System/Console/Haskeline/Term.hs:117)
+    keyEventLoop (System/Console/Haskeline/Term.hs:124)
+    saveKeys (System/Console/Haskeline/Term.hs:152)
+    Layout (System/Console/Haskeline/Term.hs:155)
+    guardedEOF (System/Console/Haskeline/Term.hs:178)
+    hMaybeReadNewline (System/Console/Haskeline/Term.hs:195)
+    returnOnEOF (System/Console/Haskeline/Term.hs:202)
+   4% (  1 / 28) in 'System.Console.Haskeline.Command'
+  Missing documentation for:
+    Module header
+    Effect (System/Console/Haskeline/Command.hs:38)
+    KeyMap (System/Console/Haskeline/Command.hs:46)
+    CmdM (System/Console/Haskeline/Command.hs:58)
+    Command (System/Console/Haskeline/Command.hs:63)
+    KeyCommand (System/Console/Haskeline/Command.hs:80)
+    KeyConsumed (System/Console/Haskeline/Command.hs:48)
+    withoutConsuming (System/Console/Haskeline/Command.hs:100)
+    keyCommand (System/Console/Haskeline/Command.hs:87)
+    >|> (System/Console/Haskeline/Command.hs:116)
+    >+> (System/Console/Haskeline/Command.hs:120)
+    try (System/Console/Haskeline/Command.hs:125)
+    effect (System/Console/Haskeline/Command.hs:138)
+    clearScreenCmd (System/Console/Haskeline/Command.hs:141)
+    finish (System/Console/Haskeline/Command.hs:132)
+    failCmd (System/Console/Haskeline/Command.hs:135)
+    simpleCommand (System/Console/Haskeline/Command.hs:144)
+    charCommand (System/Console/Haskeline/Command.hs:152)
+    setState (System/Console/Haskeline/Command.hs:156)
+    change (System/Console/Haskeline/Command.hs:159)
+    changeFromChar (Sys
+System/Console/Haskeline/Backend/Terminfo.hs:8:1: warning: [-Wunused-imports]
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+System/Console/Haskeline/InputT.hs:16:1: warning: [-Wunused-imports]
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+System/Console/Haskeline/InputT.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Control.Monad’ is redundant
+      except perhaps to import instances from ‘Control.Monad’
+    To import instances alone, use: import Control.Monad()
+tem/Console/Haskeline/Command.hs:162)
+    +> (System/Console/Haskeline/Command.hs:129)
+    useChar (System/Console/Haskeline/Command.hs:94)
+    choiceCmd (System/Console/Haskeline/Command.hs:103)
+    keyChoiceCmd (System/Console/Haskeline/Command.hs:109)
+    keyChoiceCmdM (System/Console/Haskeline/Command.hs:112)
+    doBefore (System/Console/Haskeline/Command.hs:165)
+   0% (  0 / 30) in 'System.Console.Haskeline.Command.History'
+  Missing documentation for:
+    Module header
+    HistLog (System/Console/Haskeline/Command/History.hs:13)
+    prevHistoryM (System/Console/Haskeline/Command/History.hs:16)
+    prevHistories (System/Console/Haskeline/Command/History.hs:22)
+    histLog (System/Console/Haskeline/Command/History.hs:26)
+    runHistoryFromFile (System/Console/Haskeline/Command/History.hs:30)
+    prevHistory (System/Console/Haskeline/Command/History.hs:46)
+    firstHistory (System/Console/Haskeline/Command/History.hs:46)
+    historyBack (System/Console/Haskeline/Command/History.hs:56)
+    historyForward (System/Console/Haskeline/Command/History.hs:56)
+    historyStart (System/Console/Haskeline/Command/History.hs:60)
+    historyEnd (System/Console/Haskeline/Command/History.hs:60)
+    histUpdate (System/Console/Haskeline/Command/History.hs:64)
+    reverseHist (System/Console/Haskeline/Command/History.hs:68)
+    SearchMode (System/Console/Haskeline/Command/History.hs:78)
+    Direction (System/Console/Haskeline/Command/History.hs:83)
+    directionName (System/Console/Haskeline/Command/History.hs:86)
+     (System/Console/Haskeline/Command/History.hs:90)
+     (System/Console/Haskeline/Command/History.hs:97)
+    saveSM (System/Console/Haskeline/Command/History.hs:100)
+    startSearchMode (System/Console/Haskeline/Command/History.hs:103)
+    addChar (System/Console/Haskeline/Command/History.hs:106)
+    searchHistories (System/Console/Haskeline/Command/History.hs:110)
+    findInLine (System/Console/Haskeline/Command/History.hs:118)
+    prepSearch (System/Console/Haskeline/Command/History.hs:126)
+    searchBackwards (System/Console/Haskeline/Command/History.hs:132)
+    doSearch (System/Console/Haskeline/Command/History.hs:138)
+    searchHistory (System/Console/Haskeline/Command/History.hs:149)
+    searchForPrefix (System/Console/Haskeline/Command/History.hs:176)
+    findFirst (System/Console/Haskeline/Command/History.hs:191)
+   0% (  0 / 11) in 'System.Console.Haskeline.Command.Undo'
+  Missing documentation for:
+    Module header
+    Undo (System/Console/Haskeline/Command/Undo.hs:9)
+    UndoT (System/Console/Haskeline/Command/Undo.hs:11)
+    runUndoT (System/Console/Haskeline/Command/Undo.hs:13)
+    initialUndo (System/Console/Haskeline/Command/Undo.hs:16)
+    saveToUndo (System/Console/Haskeline/Command/Undo.hs:20)
+    undoPast (System/Console/Haskeline/Command/Undo.hs:30)
+    redoFuture (System/Console/Haskeline/Command/Undo.hs:30)
+    saveForUndo (System/Console/Haskeline/Command/Undo.hs:41)
+    commandUndo (System/Console/Haskeline/Command/Undo.hs:47)
+    commandRedo (System/Console/Haskeline/Command/Undo.hs:47)
+  40% (  2 /  5) in 'System.Console.Haskeline.Command.Completion'
+  Missing documentation for:
+    Module header
+    Completion (System/Console/Haskeline/Completion.hs:34)
+    CompletionType (System/Console/Haskeline/Prefs.hs:54)
+   0% (  0 / 17) in 'System.Console.Haskeline.Command.KillRing'
+  Missing documentation for:
+    Module header
+    Stack (System/Console/Haskeline/Command/KillRing.hs:11)
+    emptyStack (System/Console/Haskeline/Command/KillRing.hs:14)
+    peek (System/Console/Haskeline/Command/KillRing.hs:17)
+    rotate (System/Console/Haskeline/Command/KillRing.hs:22)
+    push (System/Console/Haskeline/Command/KillRing.hs:27)
+    KillRing (System/Console/Haskeline/Command/KillRing.hs:30)
+    runKillRing (System/Console/Haskeline/Command/KillRing.hs:32)
+    pasteCommand (System/Console/Haskeline/Command/KillRing.hs:38)
+    deleteFromDiff' (System/Console/Haskeline/Command/KillRing.hs:48)
+    killFromHelper (System/Console/Haskeline/Command/KillRing.hs:55)
+    killFromArgHelper (System/Console/Haskeline/Command/KillRing.hs:63)
+    copyFromArgHelper (System/Console/Haskeline/Command/KillRing.hs:70)
+    KillHelper (System/Console/Haskeline/Command/KillRing.hs:78)
+    killAll (System/Console/Haskeline/Command/KillRing.hs:83)
+    applyHelper (System/Console/Haskeline/Command/KillRing.hs:86)
+    applyArgHelper (System/Console/Haskeline/Command/KillRing.hs:90)
+   0% (  0 /  2) in 'System.Console.Haskeline.RunCommand'
+  Missing documentation for:
+    Module header
+    runCommandLoop (System/Console/Haskeline/RunCommand.hs:12)
+  25% (  1 /  4) in 'System.Console.Haskeline.Backend.WCWidth'
+  Missing documentation for:
+    Module header
+    gsWidth (System/Console/Haskeline/Backend/WCWidth.hs:27)
+    takeWidth (System/Console/Haskeline/Backend/WCWidth.hs:48)
+  60% (  3 /  5) in 'System.Console.Haskeline.Backend.Posix.Encoder'
+  Missing documentation for:
+    externalHandle (System/Console/Haskeline/Backend/Posix/Encoder.hs:39)
+    openInCodingMode (System/Console/Haskeline/Backend/Posix/Encoder.hs:61)
+   0% (  0 / 13) in 'System.Console.Haskeline.Backend.Posix'
+  Missing documentation for:
+    Module header
+    withPosixGetEvent (System/Console/Haskeline/Backend/Posix.hsc:203)
+    posixLayouts (System/Console/Haskeline/Backend/Posix.hsc:63)
+    tryGetLayouts (System/Console/Haskeline/Backend/Posix.hsc:92)
+    PosixT (System/Console/Haskeline/Backend/Posix.hsc:303)
+    Handles (System/Console/Haskeline/Backend/Posix.hsc:51)
+    ehIn (System/Console/Haskeline/Backend/Posix.hsc:54)
+    ehOut (System/Console/Haskeline/Backend/Posix.hsc:54)
+    mapLines (System/Console/Haskeline/Backend/Posix.hsc:175)
+    stdinTTYHandles (System/Console/Haskeline/Backend/Posix.hsc:249)
+    ttyHandles (System/Console/Haskeline/Backend/Posix.hsc:249)
+    posixRunTerm (System/Console/Haskeline/Backend/Posix.hsc:277)
+    fileRunTerm (System/Console/Haskeline/Backend/Posix.hsc:308)
+   0% (  0 /  3) in 'System.Console.Haskeline.Backend.Terminfo'
+  Missing documentation for:
+    Module header
+    Draw (System/Console/Haskeline/Backend/Terminfo.hs:101)
+    runTerminfoDraw (System/Console/Haskeline/Backend/Terminfo.hs:124)
+   0% (  0 / 19) in 'System.Console.Haskeline.Backend.DumbTerm'
+  Missing documentation for:
+    Module header
+    Window (System/Console/Haskeline/Backend/DumbTerm.hs:17)
+    initWindow (System/Console/Haskeline/Backend/DumbTerm.hs:20)
+    DumbTerm (System/Console/Haskeline/Backend/DumbTerm.hs:23)
+    DumbTermM (System/Console/Haskeline/Backend/DumbTerm.hs:27)
+     (System/Console/Haskeline/Backend/DumbTerm.hs:29)
+    evalDumb (System/Console/Haskeline/Backend/DumbTerm.hs:32)
+    runDumbTerm (System/Console/Haskeline/Backend/DumbTerm.hs:35)
+     (System/Console/Haskeline/Backend/DumbTerm.hs:38)
+    printText (System/Console/Haskeline/Backend/DumbTerm.hs:48)
+    cr (System/Console/Haskeline/Backend/DumbTerm.hs:55)
+    crlf (System/Console/Haskeline/Backend/DumbTerm.hs:55)
+    backs (System/Console/Haskeline/Backend/DumbTerm.hs:59)
+    spaces (System/Console/Haskeline/Backend/DumbTerm.hs:59)
+    clearLayoutD (System/Console/Haskeline/Backend/DumbTerm.hs:64)
+    maxWidth (System/Console/Haskeline/Backend/DumbTerm.hs:70)
+    drawLineDiff' (System/Console/Haskeline/Backend/DumbTerm.hs:73)
+    refitLine (System/Console/Haskeline/Backend/DumbTerm.hs:97)
+    clearDeadText (System/Console/Haskeline/Backend/DumbTerm.hs:113)
+   0% (  0 /  7) in 'System.Console.Haskeline.Backend'
+  Missing documentation for:
+    Module header
+    defaultRunTerm (System/Console/Haskeline/Backend.hs:19)
+    terminalRunTerm (System/Console/Haskeline/Backend.hs:23)
+    stdinTTY (System/Console/Haskeline/Backend.hs:26)
+    directTTY (System/Console/Haskeline/Backend.hs:33)
+    runDraw (System/Console/Haskeline/Backend.hs:42)
+    fileHandleRunTerm (System/Console/Haskeline/Backend.hs:50)
+  77% ( 20 / 26) in 'System.Console.Haskeline.InputT'
+  Missing documentation for:
+    Module header
+     (System/Console/Haskeline/InputT.hs:57)
+     (System/Console/Haskeline/InputT.hs:60)
+    InputCmdT (System/Console/Haskeline/InputT.hs:76)
+    runInputCmdT (System/Console/Haskeline/InputT.hs:81)
+     (System/Console/Haskeline/InputT.hs:87)
+   0% (  0 / 13) in 'System.Console.Haskeline.Emacs'
+  Missing documentation for:
+    Module header
+    InputCmd (System/Console/Haskeline/Emacs.hs:15)
+    InputKeyCmd (System/Console/Haskeline/Emacs.hs:16)
+    emacsCommands (System/Console/Haskeline/Emacs.hs:18)
+    enders (System/Console/Haskeline/Emacs.hs:24)
+    simpleActions (System/Console/Haskeline/Emacs.hs:35)
+    controlActions (System/Console/Haskeline/Emacs.hs:35)
+    rotatePaste (System/Console/Haskeline/Emacs.hs:80)
+    wordRight (System/Console/Haskeline/Emacs.hs:89)
+    wordLeft (System/Console/Haskeline/Emacs.hs:89)
+    bigWordLeft (System/Console/Haskeline/Emacs.hs:89)
+    modifyWord (System/Console/Haskeline/Emacs.hs:94)
+    capitalize (System/Console/Haskeline/Emacs.hs:100)
+   0% (  0 / 57) in 'System.Console.Haskeline.Vi'
+  Missing documentation for:
+    Module header
+    EitherMode (System/Console/Haskeline/Vi.hs:16)
+    SavedCommand (System/Console/Haskeline/Vi.hs:18)
+    ViState (System/Console/Haskeline/Vi.hs:20)
+    emptyViState (System/Console/Haskeline/Vi.hs:25)
+    ViT (System/Console/Haskeline/Vi.hs:31)
+    InputCmd (System/Console/Haskeline/Vi.hs:33)
+    InputKeyCmd (System/Console/Haskeline/Vi.hs:34)
+    viKeyCommands (System/Console/Haskeline/Vi.hs:36)
+    viCommands (System/Console/Haskeline/Vi.hs:45)
+    simpleInsertions (System/Console/Haskeline/Vi.hs:48)
+    insertChars (System/Console/Haskeline/Vi.hs:66)
+    eofIfEmpty (System/Console/Haskeline/Vi.hs:79)
+    viCommandActions (System/Console/Haskeline/Vi.hs:84)
+    exitingCommands (System/Console/Haskeline/Vi.hs:97)
+    simpleCmdActions (System/Console/Haskeline/Vi.hs:110)
+    replaceOnce (System/Console/Haskeline/Vi.hs:131)
+    repeatedCommands (System/Console/Haskeline/Vi.hs:134)
+    pureMovements (System/Console/Haskeline/Vi.hs:146)
+    useMovementsForKill (System/Console/Haskeline/Vi.hs:160)
+    repeatableCommands (System/Console/Haskeline/Vi.hs:179)
+    repeatableCmdMode (System/Console/Haskeline/Vi.hs:188)
+    flipCase (System/Console/Haskeline/Vi.hs:203)
+    repeatableCmdToIMode (System/Console/Haskeline/Vi.hs:210)
+    deletionCmd (System/Console/Haskeline/Vi.hs:213)
+    deletionToInsertCmd (System/Console/Haskeline/Vi.hs:221)
+    yankCommand (System/Console/Haskeline/Vi.hs:234)
+    reinputArg (System/Console/Haskeline/Vi.hs:244)
+    goToWordDelEnd (System/Console/Haskeline/Vi.hs:253)
+    goToBigWordDelEnd (System/Console/Haskeline/Vi.hs:253)
+    movements (System/Console/Haskeline/Vi.hs:259)
+    isBigWordChar (System/Console/Haskeline/Vi.hs:293)
+    isWordChar (System/Console/Haskeline/Vi.hs:293)
+    isOtherChar (System/Console/Haskeline/Vi.hs:293)
+    .||. (System/Console/Haskeline/Vi.hs:298)
+    foreachDigit (System/Console/Haskeline/Vi.hs:301)
+    wordErase (System/Console/Haskeline/Vi.hs:310)
+    findMatchingBrace (System/Console/Haskeline/Vi.hs:316)
+    deleteMatchingBrace (System/Console/Haskeline/Vi.hs:325)
+    scanBraces (System/Console/Haskeline/Vi.hs:335)
+    matchingRightBrace (System/Console/Haskeline/Vi.hs:345)
+    matchingLeftBrace (System/Console/Haskeline/Vi.hs:345)
+    braceList (System/Console/Haskeline/Vi.hs:349)
+    replaceLoop (System/Console/Haskeline/Vi.hs:354)
+    storeLastCmd (System/Console/Haskeline/Vi.hs:369)
+    storedAction (System/Console/Haskeline/Vi.hs:374)
+    storedCmdAction (System/Console/Haskeline/Vi.hs:377)
+    storedIAction (System/Console/Haskeline/Vi.hs:381)
+    killAndStoreCmd (System/Console/Haskeline/Vi.hs:385)
+    killAndStoreI (System/Console/Haskeline/Vi.hs:388)
+    killAndStoreIE (System/Console/Haskeline/Vi.hs:391)
+    noArg (System/Console/Haskeline/Vi.hs:394)
+    SearchEntry (System/Console/Haskeline/Vi.hs:400)
+    searchText (System/Console/Haskeline/Vi.hs:405)
+     (System/Console/Haskeline/Vi.hs:408)
+    viEnterSearch (System/Console/Haskeline/Vi.hs:413)
+    viSearchHist (System/Console/Haskeline/Vi.hs:432)
+  98% ( 48 / 49) in 'System.Console.Haskeline'
+  Missing documentation for:
+    Interrupt (System/Console/Haskeline/Term.hs:95)
+  83% (  5 /  6) in 'System.Console.Haskeline.IO'
+  Missing documentation for:
+    InputState (System/Console/Haskeline/IO.hs:53)
+Documentation created:
+.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/haskeline/index.html,
+.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/haskeline/haskeline.txt
 Installing library in
 /Users/danielrodriguezchavarria/SAT-Pol/.stack-work/install/x86_64-osx/lts-8.22/8.0.2/lib/x86_64-osx-ghc-8.0.2/haskeline-0.7.4.0-6Hq0O8CROR8yGaHAlnjIO
 Registering haskeline-0.7.4.0...
