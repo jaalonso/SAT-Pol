@@ -1,0 +1,913 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-14 09:48:20.373988 UTC
+
+interface SAT-Pol-0.1.0.0-CfnMeGgalar5P7rViiH2gc:Examples 8002
+  interface hash: 39006a99430479d1c4d9374d3eb5d209
+  ABI hash: 2ca37c64f1164d9ab49a876e8f9de3cd
+  export-list hash: a437791fa41925cddf976f89ab96fc07
+  orphan hash: 2cd37a90db18b71688475701f1f0b73f
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Examples.example
+  Examples.x1
+  Examples.x2
+  Examples.x3
+  Examples.x4
+module dependencies:
+package dependencies: HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Algebras.Structures
+         HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.CommutativeAlgebra.Polynomial
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz:Data.Set.Internal
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Algebras.Structures cbf553a388e500de36f995a8d89172a4
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Algebras.TensorProduct c053039aae50bcc7df2c155eefb8e506
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Algebras.VectorSpace 6cba24ab7ee9b5f302ba65e0ee801d61
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.CommutativeAlgebra.Polynomial b54042f0d44ec74552e332a486c1ec0b
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Core.Field 75661b1cf3e7c0e1ab0f62f78c950ef8
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Core.Utils 5681b0689a2f6e26ea9c0077f1ee1777
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz:Data.Set 0a21f3925a0d3a5e69c1f4a8e792bc80
+6dbead41527c55384f076bf4dbe34584
+  $s$fAlgebrakLex2 :: GHC.Classes.Ord [GHC.Types.Char]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Classes.$fOrd[]_$s$fOrd[]1 -}
+ba3b97660feb6cc0d4ff9c47af22b0b0
+  $s$fEqLex ::
+    GHC.Classes.Eq
+      (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+                  (Math.CommutativeAlgebra.Polynomial.$fEqLex_$c==
+                     @ [GHC.Types.Char]
+                     Examples.$s$fEqLex1)
+                  (Math.CommutativeAlgebra.Polynomial.$fEqLex_$c/=
+                     @ [GHC.Types.Char]
+                     Examples.$s$fEqLex1) -}
+d6df4e6eca645dc151b733bb4eb8ca83
+  $s$fEqLex1 :: GHC.Classes.Eq [GHC.Types.Char]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Classes.$fEq[]_$s$fEq[]1 -}
+a20b74311cddf889d612b9bc42fc31c0
+  $s$fOrdLex ::
+    GHC.Classes.Ord
+      (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+                  Examples.$s$fOrdLex_$s$fOrdLex_$cp1Ord
+                  (Math.CommutativeAlgebra.Polynomial.$fOrdLex_$ccompare
+                     @ [GHC.Types.Char]
+                     Examples.$s$fAlgebrakLex2)
+                  Examples.$s$fOrdLex6
+                  Examples.$s$fOrdLex5
+                  Examples.$s$fOrdLex4
+                  Examples.$s$fOrdLex3
+                  Examples.$s$fOrdLex2
+                  Examples.$s$fOrdLex1 -}
+3964b400f4c84bad58c78c45f6a2fb86
+  $s$fOrdLex1 ::
+    Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS),1*U(U,U)><S(LS),1*U(U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+                   (y :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]) ->
+                 case x `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww { Math.CommutativeAlgebra.Polynomial.M ww1 ww2 ->
+                 case y `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww3 { Math.CommutativeAlgebra.Polynomial.M ww4 ww5 ->
+                 case Math.CommutativeAlgebra.Polynomial.$w$ccompare
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fOrd[]_$s$fOrd[]1
+                        ww2
+                        ww5 of wild {
+                   DEFAULT
+                   -> ww
+                        `cast`
+                      (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N)
+                   GHC.Types.GT
+                   -> ww3
+                        `cast`
+                      (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N) } } }) -}
+1af3afbed63cbddd8620589d17eb12d0
+  $s$fOrdLex2 ::
+    Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS),1*U(U,U)><S(LS),1*U(U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+                   (y :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]) ->
+                 case x `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww { Math.CommutativeAlgebra.Polynomial.M ww1 ww2 ->
+                 case y `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww3 { Math.CommutativeAlgebra.Polynomial.M ww4 ww5 ->
+                 case Math.CommutativeAlgebra.Polynomial.$w$ccompare
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fOrd[]_$s$fOrd[]1
+                        ww2
+                        ww5 of wild {
+                   DEFAULT
+                   -> ww3
+                        `cast`
+                      (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N)
+                   GHC.Types.GT
+                   -> ww
+                        `cast`
+                      (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N) } } }) -}
+69290b094db58daf5f5a1d097fc9b644
+  $s$fOrdLex3 ::
+    Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS),1*U(A,1*U)><S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+                   (y :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]) ->
+                 case x `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww { Math.CommutativeAlgebra.Polynomial.M ww1 ww2 ->
+                 case y `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww3 { Math.CommutativeAlgebra.Polynomial.M ww4 ww5 ->
+                 case Math.CommutativeAlgebra.Polynomial.$w$ccompare
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fOrd[]_$s$fOrd[]1
+                        ww2
+                        ww5 of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False } } }) -}
+260271301b1a4958db4f7648a2843ec1
+  $s$fOrdLex4 ::
+    Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS),1*U(A,1*U)><S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+                   (y :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]) ->
+                 case x `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww { Math.CommutativeAlgebra.Polynomial.M ww1 ww2 ->
+                 case y `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww3 { Math.CommutativeAlgebra.Polynomial.M ww4 ww5 ->
+                 case Math.CommutativeAlgebra.Polynomial.$w$ccompare
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fOrd[]_$s$fOrd[]1
+                        ww2
+                        ww5 of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True } } }) -}
+99a33708c03a61928b67ccd476f33778
+  $s$fOrdLex5 ::
+    Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS),1*U(A,1*U)><S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+                   (y :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]) ->
+                 case x `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww { Math.CommutativeAlgebra.Polynomial.M ww1 ww2 ->
+                 case y `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww3 { Math.CommutativeAlgebra.Polynomial.M ww4 ww5 ->
+                 case Math.CommutativeAlgebra.Polynomial.$w$ccompare
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fOrd[]_$s$fOrd[]1
+                        ww2
+                        ww5 of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False } } }) -}
+c4759e1b2399ab20c577739ff838358f
+  $s$fOrdLex6 ::
+    Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS),1*U(A,1*U)><S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+                   (y :: Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]) ->
+                 case x `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww { Math.CommutativeAlgebra.Polynomial.M ww1 ww2 ->
+                 case y `cast`
+                      (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N) of ww3 { Math.CommutativeAlgebra.Polynomial.M ww4 ww5 ->
+                 case Math.CommutativeAlgebra.Polynomial.$w$ccompare
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fOrd[]_$s$fOrd[]1
+                        ww2
+                        ww5 of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True } } }) -}
+789019342478c12d37207a2feae2e69b
+  $s$fOrdLex_$s$fOrdLex_$cp1Ord ::
+    GHC.Classes.Eq
+      (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Examples.$s$fEqLex -}
+d6b9b78bbd99610c68f16ca3fd51898c
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Examples.$trModule2
+                   Examples.$trModule1) -}
+98dab85fff217bcd8b5dc86dfbfcac89
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Examples"#) -}
+737db1cd10536b3af5abb13a8919a6b6
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "SAT-Pol-0.1.0.0-CfnMeGgalar5P7rViiH2gc"#) -}
+f305fc5214e2e755b32d9d4a9ef6608e
+  example ::
+    [Math.CommutativeAlgebra.Polynomial.LexPoly
+       Math.Core.Field.F2 GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.LexPoly
+                        Math.Core.Field.F2 GHC.Base.String)
+                   Examples.example29
+                   Examples.example1) -}
+61c5b4711722ed97908191069d350967
+  example1 ::
+    [Math.CommutativeAlgebra.Polynomial.LexPoly
+       Math.Core.Field.F2 GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.LexPoly
+                        Math.Core.Field.F2 GHC.Base.String)
+                   Examples.example28
+                     `cast`
+                   (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                             <Math.Core.Field.F2>_R
+                             <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R))
+                   Examples.example2) -}
+b34b392b781e500412343814627437e9
+  example10 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+      Math.Core.Field.F2)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                      Math.Core.Field.F2)
+                   Examples.example11
+                   (GHC.Types.[]
+                      @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                         Math.Core.Field.F2))) -}
+44d6e8c0fb56d7e2569cc41c5baa05b8
+  example11 ::
+    (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+     Math.Core.Field.F2)
+  {- Strictness: m,
+     Unfolding: ((Examples.example12
+                    `cast`
+                  (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N),
+                  Examples.example8)) -}
+fae376623c2e23dd5a48326ba6a38256
+  example12 ::
+    Math.CommutativeAlgebra.Polynomial.MonImpl [GHC.Types.Char]
+  {- Strictness: m,
+     Unfolding: (Math.CommutativeAlgebra.Polynomial.M
+                   @ [GHC.Types.Char]
+                   Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorGlex1
+                   Examples.example13) -}
+85aa0be058defd4815303d873728433a
+  example13 :: [([GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.Types.Int)
+                   Examples.example14
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.Types.Int))) -}
+3484eda018e37fa0b95a2e0280dc3181
+  example14 :: ([GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Examples.example15,
+                  Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorGlex1)) -}
+99599d9d350b50c3e35b8b65aadb1e46
+  example15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x2"#) -}
+92826205d35bd465832a2b9cf81109d2
+  example16 ::
+    Math.Algebras.VectorSpace.Vect
+      Math.Core.Field.F2
+      (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+  {- Unfolding: (Examples.example24
+                   Examples.example17
+                     `cast`
+                   (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                             <Math.Core.Field.F2>_R
+                             <(Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+                               Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)>_R))) -}
+c88fd52a974b868fe1c7e118d6b32bc0
+  example17 ::
+    [((Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+       Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String),
+      Math.Core.Field.F2)]
+  {- Unfolding: (Math.Algebras.TensorProduct.reify1
+                   @ Math.Core.Field.F2
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                   Math.Core.Field.$fNumF2
+                   Examples.example18
+                     `cast`
+                   (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                             <Math.Core.Field.F2>_R
+                             <Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]>_R))
+                   Examples.example10
+                     `cast`
+                   (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                             <Math.Core.Field.F2>_R
+                             <Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]>_R))) -}
+0c67545781c2ea7c61895c6466f04316
+  example18 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+      Math.Core.Field.F2)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                      Math.Core.Field.F2)
+                   Examples.example19
+                   (GHC.Types.[]
+                      @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                         Math.Core.Field.F2))) -}
+7285eb6b8c49d63531c27d48dc968482
+  example19 ::
+    (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+     Math.Core.Field.F2)
+  {- Strictness: m,
+     Unfolding: ((Examples.example20
+                    `cast`
+                  (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N),
+                  Examples.example8)) -}
+f69618dd73f20a4a78f783eeead7003d
+  example2 ::
+    [Math.CommutativeAlgebra.Polynomial.LexPoly
+       Math.Core.Field.F2 GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.LexPoly
+                        Math.Core.Field.F2 GHC.Base.String)
+                   Examples.example26
+                   Examples.example3) -}
+b7d5df64e10a2eb159f8b1fac31fab65
+  example20 ::
+    Math.CommutativeAlgebra.Polynomial.MonImpl [GHC.Types.Char]
+  {- Strictness: m,
+     Unfolding: (Math.CommutativeAlgebra.Polynomial.M
+                   @ [GHC.Types.Char]
+                   Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorGlex1
+                   Examples.example21) -}
+d725c07dfe9649c7c69608989de93f2e
+  example21 :: [([GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.Types.Int)
+                   Examples.example22
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.Types.Int))) -}
+239fcf7fb0131e56642e686dee8cd482
+  example22 :: ([GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Examples.example23,
+                  Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorGlex1)) -}
+1f14efd286f96be988321b9c331f4e72
+  example23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x1"#) -}
+d5dd030e78f2f2a9625116fdb22cc975
+  example24 ::
+    Math.Algebras.VectorSpace.Vect
+      Math.Core.Field.F2
+      (Math.Algebras.TensorProduct.Tensor
+         (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+         (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]))
+    -> Math.Algebras.VectorSpace.Vect
+         Math.Core.Field.F2
+         (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char])
+  {- Unfolding: (Math.CommutativeAlgebra.Polynomial.$w$cmult2
+                   @ Math.Core.Field.F2
+                   @ [GHC.Types.Char]
+                   Math.Core.Field.$fEqF2
+                   Math.Core.Field.$fNumF2
+                   GHC.Classes.$fOrd[]_$s$fOrd[]1) -}
+f785c4ad2710f095a0e234ecbae3138d
+  example25 ::
+    Math.CommutativeAlgebra.Polynomial.LexPoly
+      Math.Core.Field.F2 GHC.Base.String
+  {- Unfolding: (case GHC.Classes.modInt# 0# 2# of ww2 { DEFAULT ->
+                 case GHC.Classes.modInt# 1# 2# of ww1 { DEFAULT ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww1 ww2) of wild {
+                   GHC.Types.False
+                   -> letrec {
+                        go :: [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                Math.Core.Field.F2)]
+                              -> [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                   Math.Core.Field.F2)]
+                          {- Arity: 1, Strictness: <S,1*U> -}
+                        = \ (ds2 :: [(Math.CommutativeAlgebra.Polynomial.Lex
+                                        [GHC.Types.Char],
+                                      Math.Core.Field.F2)]) ->
+                          case ds2 of wild1 {
+                            []
+                            -> GHC.Types.[]
+                                 @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                    Math.Core.Field.F2)
+                            : y ys
+                            -> case y of wild2 { (,) ei xi ->
+                               GHC.Types.:
+                                 @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                    Math.Core.Field.F2)
+                                 (ei,
+                                  case xi
+                                         `cast`
+                                       (Math.Core.Field.N:F2[0]) of wild4 { GHC.Types.I# y1 ->
+                                  (GHC.Types.I# (GHC.Prim.*# ww1 y1))
+                                    `cast`
+                                  (Sym (Math.Core.Field.N:F2[0])) })
+                                 (go ys) } }
+                      } in
+                      (Math.Algebras.VectorSpace.addmerge
+                         @ Math.Core.Field.F2
+                         @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                         Math.Core.Field.$fEqF2
+                         Math.Core.Field.$fNumF2
+                         Examples.$s$fOrdLex
+                         Examples.example16
+                           `cast`
+                         (Math.Algebras.VectorSpace.N:Vect[0]
+                              <Math.Core.Field.F2>_R
+                              <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R)
+                         (go Examples.example6))
+                        `cast`
+                      (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                <Math.Core.Field.F2>_R
+                                <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R))
+                   GHC.Types.True
+                   -> (Math.Algebras.VectorSpace.addmerge
+                         @ Math.Core.Field.F2
+                         @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                         Math.Core.Field.$fEqF2
+                         Math.Core.Field.$fNumF2
+                         Examples.$s$fOrdLex
+                         Examples.example16
+                           `cast`
+                         (Math.Algebras.VectorSpace.N:Vect[0]
+                              <Math.Core.Field.F2>_R
+                              <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R)
+                         (GHC.Types.[]
+                            @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                               Math.Core.Field.F2)))
+                        `cast`
+                      (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                <Math.Core.Field.F2>_R
+                                <Math.CommutativeAlgebra.Polynomial.Lex
+                                   GHC.Base.String>_R)) } } }) -}
+c08fe4100d16d9fa4154f8fb16508da6
+  example26 ::
+    Math.CommutativeAlgebra.Polynomial.LexPoly
+      Math.Core.Field.F2 GHC.Base.String
+  {- Unfolding: (case GHC.Classes.modInt# 0# 2# of ww2 { DEFAULT ->
+                 case GHC.Classes.modInt# 1# 2# of ww1 { DEFAULT ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww1 ww2) of wild {
+                   GHC.Types.False
+                   -> letrec {
+                        go :: [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                Math.Core.Field.F2)]
+                              -> [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                   Math.Core.Field.F2)]
+                          {- Arity: 1, Strictness: <S,1*U> -}
+                        = \ (ds2 :: [(Math.CommutativeAlgebra.Polynomial.Lex
+                                        [GHC.Types.Char],
+                                      Math.Core.Field.F2)]) ->
+                          case ds2 of wild1 {
+                            []
+                            -> GHC.Types.[]
+                                 @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                    Math.Core.Field.F2)
+                            : y ys
+                            -> case y of wild2 { (,) ei xi ->
+                               GHC.Types.:
+                                 @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                    Math.Core.Field.F2)
+                                 (ei,
+                                  case xi
+                                         `cast`
+                                       (Math.Core.Field.N:F2[0]) of wild4 { GHC.Types.I# y1 ->
+                                  (GHC.Types.I# (GHC.Prim.*# ww1 y1))
+                                    `cast`
+                                  (Sym (Math.Core.Field.N:F2[0])) })
+                                 (go ys) } }
+                      } in
+                      (Math.Algebras.VectorSpace.addmerge
+                         @ Math.Core.Field.F2
+                         @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                         Math.Core.Field.$fEqF2
+                         Math.Core.Field.$fNumF2
+                         Examples.$s$fOrdLex
+                         Examples.example27
+                         (go Examples.example6))
+                        `cast`
+                      (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                <Math.Core.Field.F2>_R
+                                <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R))
+                   GHC.Types.True
+                   -> (Math.Algebras.VectorSpace.addmerge
+                         @ Math.Core.Field.F2
+                         @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                         Math.Core.Field.$fEqF2
+                         Math.Core.Field.$fNumF2
+                         Examples.$s$fOrdLex
+                         Examples.example27
+                         (GHC.Types.[]
+                            @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                               Math.Core.Field.F2)))
+                        `cast`
+                      (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                <Math.Core.Field.F2>_R
+                                <Math.CommutativeAlgebra.Polynomial.Lex
+                                   GHC.Base.String>_R)) } } }) -}
+2fc32c6feaa326e4042dca5e6d143855
+  example27 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+      Math.Core.Field.F2)]
+  {- Unfolding: (Math.Algebras.VectorSpace.addmerge
+                   @ Math.Core.Field.F2
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                   Math.Core.Field.$fEqF2
+                   Math.Core.Field.$fNumF2
+                   Examples.$s$fOrdLex
+                   Examples.example16
+                     `cast`
+                   (Math.Algebras.VectorSpace.N:Vect[0]
+                        <Math.Core.Field.F2>_R
+                        <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R)
+                   Examples.example18) -}
+6f7af9d8b92615a94b0a5bd85c04a5fe
+  example28 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+      Math.Core.Field.F2)]
+  {- Unfolding: (Math.Algebras.VectorSpace.addmerge
+                   @ Math.Core.Field.F2
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                   Math.Core.Field.$fEqF2
+                   Math.Core.Field.$fNumF2
+                   Examples.$s$fOrdLex
+                   Examples.example27
+                   Examples.example10) -}
+9d5267833a2eab99a0dc8265dbee8a9a
+  example29 ::
+    Math.CommutativeAlgebra.Polynomial.LexPoly
+      Math.Core.Field.F2 GHC.Base.String
+  {- Unfolding: (case GHC.Classes.modInt# 0# 2# of ww2 { DEFAULT ->
+                 case GHC.Classes.modInt# 1# 2# of ww1 { DEFAULT ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww1 ww2) of wild {
+                   GHC.Types.False
+                   -> letrec {
+                        go :: [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                Math.Core.Field.F2)]
+                              -> [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                   Math.Core.Field.F2)]
+                          {- Arity: 1, Strictness: <S,1*U> -}
+                        = \ (ds2 :: [(Math.CommutativeAlgebra.Polynomial.Lex
+                                        [GHC.Types.Char],
+                                      Math.Core.Field.F2)]) ->
+                          case ds2 of wild1 {
+                            []
+                            -> GHC.Types.[]
+                                 @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                    Math.Core.Field.F2)
+                            : y ys
+                            -> case y of wild2 { (,) ei xi ->
+                               GHC.Types.:
+                                 @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                    Math.Core.Field.F2)
+                                 (ei,
+                                  case xi
+                                         `cast`
+                                       (Math.Core.Field.N:F2[0]) of wild4 { GHC.Types.I# y1 ->
+                                  (GHC.Types.I# (GHC.Prim.*# ww1 y1))
+                                    `cast`
+                                  (Sym (Math.Core.Field.N:F2[0])) })
+                                 (go ys) } }
+                      } in
+                      (go Examples.example6)
+                        `cast`
+                      (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                <Math.Core.Field.F2>_R
+                                <Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]>_R))
+                   GHC.Types.True
+                   -> (GHC.Types.[]
+                         @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                            Math.Core.Field.F2))
+                        `cast`
+                      (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                <Math.Core.Field.F2>_R
+                                <Math.CommutativeAlgebra.Polynomial.Lex
+                                   [GHC.Types.Char]>_R)) } } }) -}
+bf83adf78ed4c98fc89895c6b3cb31cc
+  example3 ::
+    [Math.CommutativeAlgebra.Polynomial.LexPoly
+       Math.Core.Field.F2 GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.LexPoly
+                        Math.Core.Field.F2 GHC.Base.String)
+                   Examples.example25
+                   Examples.example4) -}
+3d875c463c29f6ade1f8040a0725d382
+  example4 ::
+    [Math.CommutativeAlgebra.Polynomial.LexPoly
+       Math.Core.Field.F2 GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.LexPoly
+                        Math.Core.Field.F2 GHC.Base.String)
+                   Examples.example5
+                   (GHC.Types.[]
+                      @ (Math.CommutativeAlgebra.Polynomial.LexPoly
+                           Math.Core.Field.F2 GHC.Base.String))) -}
+ed3b7647b7371afa10816ccc0986d03d
+  example5 ::
+    Math.CommutativeAlgebra.Polynomial.LexPoly
+      Math.Core.Field.F2 GHC.Base.String
+  {- Unfolding: (case GHC.Classes.modInt# 0# 2# of ww2 { DEFAULT ->
+                 case GHC.Classes.modInt# 1# 2# of ww1 { DEFAULT ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww1 ww2) of wild {
+                   GHC.Types.False
+                   -> letrec {
+                        go :: [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                Math.Core.Field.F2)]
+                              -> [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                   Math.Core.Field.F2)]
+                          {- Arity: 1, Strictness: <S,1*U> -}
+                        = \ (ds2 :: [(Math.CommutativeAlgebra.Polynomial.Lex
+                                        [GHC.Types.Char],
+                                      Math.Core.Field.F2)]) ->
+                          case ds2 of wild1 {
+                            []
+                            -> GHC.Types.[]
+                                 @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                    Math.Core.Field.F2)
+                            : y ys
+                            -> case y of wild2 { (,) ei xi ->
+                               GHC.Types.:
+                                 @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                                    Math.Core.Field.F2)
+                                 (ei,
+                                  case xi
+                                         `cast`
+                                       (Math.Core.Field.N:F2[0]) of wild4 { GHC.Types.I# y1 ->
+                                  (GHC.Types.I# (GHC.Prim.*# ww1 y1))
+                                    `cast`
+                                  (Sym (Math.Core.Field.N:F2[0])) })
+                                 (go ys) } }
+                      } in
+                      (Math.Algebras.VectorSpace.addmerge
+                         @ Math.Core.Field.F2
+                         @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                         Math.Core.Field.$fEqF2
+                         Math.Core.Field.$fNumF2
+                         Examples.$s$fOrdLex
+                         Examples.example9
+                         (go Examples.example6))
+                        `cast`
+                      (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                <Math.Core.Field.F2>_R
+                                <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R))
+                   GHC.Types.True
+                   -> (Math.Algebras.VectorSpace.addmerge
+                         @ Math.Core.Field.F2
+                         @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                         Math.Core.Field.$fEqF2
+                         Math.Core.Field.$fNumF2
+                         Examples.$s$fOrdLex
+                         Examples.example9
+                         (GHC.Types.[]
+                            @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                               Math.Core.Field.F2)))
+                        `cast`
+                      (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                <Math.Core.Field.F2>_R
+                                <Math.CommutativeAlgebra.Polynomial.Lex
+                                   GHC.Base.String>_R)) } } }) -}
+82c7d40914509502e51f4dc6bc2834d1
+  example6 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+      Math.Core.Field.F2)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                      Math.Core.Field.F2)
+                   Examples.example7
+                   (GHC.Types.[]
+                      @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                         Math.Core.Field.F2))) -}
+f2935463c720c35ee754a950e2045670
+  example7 ::
+    (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+     Math.Core.Field.F2)
+  {- Unfolding: (((Math.CommutativeAlgebra.Polynomial.$fAlgebrakGlex1
+                     @ [GHC.Types.Char])
+                    `cast`
+                  (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N),
+                  Examples.example8)) -}
+ab40cd1bb6608225fdea364139a44bca
+  example8 :: Math.Core.Field.F2
+  {- Unfolding: (case GHC.Classes.modInt# 1# 2# of ww2 { DEFAULT ->
+                 (GHC.Types.I# ww2) `cast` (Sym (Math.Core.Field.N:F2[0])) }) -}
+c37123e3ae5dc0e737c907bff03db839
+  example9 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+      Math.Core.Field.F2)]
+  {- Unfolding: (Math.Algebras.VectorSpace.addmerge
+                   @ Math.Core.Field.F2
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                   Math.Core.Field.$fEqF2
+                   Math.Core.Field.$fNumF2
+                   Examples.$s$fOrdLex
+                   Examples.example16
+                     `cast`
+                   (Math.Algebras.VectorSpace.N:Vect[0]
+                        <Math.Core.Field.F2>_R
+                        <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R)
+                   Examples.example10) -}
+a0d6c72ae573b677454ed997c8a5ea8c
+  x1 ::
+    Math.CommutativeAlgebra.Polynomial.LexPoly
+      Math.Core.Field.F2 GHC.Base.String
+  {- Strictness: m2,
+     Unfolding: InlineRule (0, True, True)
+                Examples.example18
+                  `cast`
+                (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                          <Math.Core.Field.F2>_R
+                          <Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]>_R)) -}
+ae126b4cc75e7d5a5c46f1fa8c7c4ef3
+  x10 :: [([GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.Types.Int)
+                   Examples.x11
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.Types.Int))) -}
+e68fc887d517a8124112fd1128bb8424
+  x11 :: ([GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Examples.x12,
+                  Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorGlex1)) -}
+01ffc2eafe779433b8a21f10591dae3c
+  x12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x3"#) -}
+88278cdf43d8e7110b4c70dbcde92f6a
+  x13 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+      Math.Core.Field.F2)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                      Math.Core.Field.F2)
+                   Examples.x14
+                   (GHC.Types.[]
+                      @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                         Math.Core.Field.F2))) -}
+4fdeed3638b838d405129bf405ba8fd0
+  x14 ::
+    (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+     Math.Core.Field.F2)
+  {- Strictness: m,
+     Unfolding: ((Examples.x15
+                    `cast`
+                  (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N),
+                  Examples.example8)) -}
+4a7d6dd154867c968c42f85880df22c4
+  x15 :: Math.CommutativeAlgebra.Polynomial.MonImpl [GHC.Types.Char]
+  {- Strictness: m,
+     Unfolding: (Math.CommutativeAlgebra.Polynomial.M
+                   @ [GHC.Types.Char]
+                   Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorGlex1
+                   Examples.x16) -}
+78579d6a5ccdc3465225d557cf11d665
+  x16 :: [([GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.Types.Int)
+                   Examples.x17
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.Types.Int))) -}
+d0c720ec6e56369a94bdcceaed15983e
+  x17 :: ([GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Examples.x18,
+                  Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorGlex1)) -}
+e9835c36b2cbe29a21e4a5638dac0c64
+  x18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x4"#) -}
+a6c818da7780476d1b143db6dcbf21c2
+  x2 ::
+    Math.CommutativeAlgebra.Polynomial.LexPoly
+      Math.Core.Field.F2 GHC.Base.String
+  {- Strictness: m2,
+     Unfolding: InlineRule (0, True, True)
+                Examples.example10
+                  `cast`
+                (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                          <Math.Core.Field.F2>_R
+                          <Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]>_R)) -}
+bd414295f4df1c49731dc4d7dac75b28
+  x3 ::
+    Math.CommutativeAlgebra.Polynomial.LexPoly
+      Math.Core.Field.F2 GHC.Base.String
+  {- Strictness: m2,
+     Unfolding: InlineRule (0, True, True)
+                Examples.x7
+                  `cast`
+                (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                          <Math.Core.Field.F2>_R
+                          <Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]>_R)) -}
+49fd5b1b104d205835a88daafa771870
+  x4 ::
+    Math.CommutativeAlgebra.Polynomial.LexPoly
+      Math.Core.Field.F2 GHC.Base.String
+  {- Strictness: m2,
+     Unfolding: InlineRule (0, True, True)
+                Examples.x13
+                  `cast`
+                (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                          <Math.Core.Field.F2>_R
+                          <Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char]>_R)) -}
+3ebf67d178a7477d1dfac3c36c46ce45
+  x7 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+      Math.Core.Field.F2)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                      Math.Core.Field.F2)
+                   Examples.x8
+                   (GHC.Types.[]
+                      @ (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+                         Math.Core.Field.F2))) -}
+ef703d3a97beef3c98bbabe4efdc388d
+  x8 ::
+    (Math.CommutativeAlgebra.Polynomial.Lex [GHC.Types.Char],
+     Math.Core.Field.F2)
+  {- Strictness: m,
+     Unfolding: ((Examples.x9
+                    `cast`
+                  (Sym (Math.CommutativeAlgebra.Polynomial.N:Lex[0]) <[GHC.Types.Char]>_N),
+                  Examples.example8)) -}
+9ece15b2adb5449cacab1c51f4ff2d31
+  x9 :: Math.CommutativeAlgebra.Polynomial.MonImpl [GHC.Types.Char]
+  {- Strictness: m,
+     Unfolding: (Math.CommutativeAlgebra.Polynomial.M
+                   @ [GHC.Types.Char]
+                   Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorGlex1
+                   Examples.x10) -}
+"SPEC/Examples $fEqLex @ [Char]" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                            [GHC.Types.Char])
+  Math.CommutativeAlgebra.Polynomial.$fEqLex @ [GHC.Types.Char] $dEq
+  = Examples.$s$fEqLex
+"SPEC/Examples $fOrdLex @ [Char]" [ALWAYS] forall ($dOrd :: GHC.Classes.Ord
+                                                              [GHC.Types.Char])
+  Math.CommutativeAlgebra.Polynomial.$fOrdLex @ [GHC.Types.Char]
+                                              $dOrd
+  = Examples.$s$fOrdLex
+"SPEC/Examples $fOrdLex_$cp1Ord @ [Char]" [ALWAYS] forall ($dOrd :: GHC.Classes.Ord
+                                                                      [GHC.Types.Char])
+  Math.CommutativeAlgebra.Polynomial.$fOrdLex_$cp1Ord @ [GHC.Types.Char]
+                                                      $dOrd
+  = Examples.$s$fOrdLex_$s$fOrdLex_$cp1Ord
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

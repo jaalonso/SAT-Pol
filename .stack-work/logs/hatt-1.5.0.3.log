@@ -1,0 +1,20 @@
+Configuring hatt-1.5.0.3...
+Building hatt-1.5.0.3...
+Preprocessing library hatt-1.5.0.3...
+[1 of 5] Compiling Data.Logic.Propositional.Core ( src/Data/Logic/Propositional/Core.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Logic/Propositional/Core.o )
+[2 of 5] Compiling Data.Logic.Propositional.NormalForms ( src/Data/Logic/Propositional/NormalForms.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Logic/Propositional/NormalForms.o )
+[3 of 5] Compiling Data.Logic.Propositional.Parser ( src/Data/Logic/Propositional/Parser.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Logic/Propositional/Parser.o )
+[4 of 5] Compiling Data.Logic.Propositional.Tables ( src/Data/Logic/Propositional/Tables.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Logic/Propositional/Tables.o )
+
+src/Data/Logic/Propositional/Tables.hs:42:31: warning: [-Wdeprecations]
+    In the use of ‘fold’ (imported from Data.Map):
+    Deprecated: "As of version 0.5, replaced by 'foldr'."
+[5 of 5] Compiling Data.Logic.Propositional ( src/Data/Logic/Propositional.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Logic/Propositional.o )
+Preprocessing executable 'hatt' for hatt-1.5.0.3...
+[1 of 1] Compiling Main             ( src/hatt.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/hatt/hatt-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/hatt/hatt ...
+Installing library in
+/Users/danielrodriguezchavarria/SAT-Pol/.stack-work/install/x86_64-osx/lts-8.22/8.0.2/lib/x86_64-osx-ghc-8.0.2/hatt-1.5.0.3-GWtyu7iSUZM8OxhcENGMFZ
+Installing executable(s) in
+/Users/danielrodriguezchavarria/SAT-Pol/.stack-work/install/x86_64-osx/lts-8.22/8.0.2/bin
+Registering hatt-1.5.0.3...
