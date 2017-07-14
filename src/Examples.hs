@@ -33,9 +33,9 @@ example = [1,x1*x2+x1+x2,x1*x2+x1+1,x1*x2+1,x1*x2+x2+1]
 -- --ej1 :: Vect F2 (Lex String)
 -- ej1 = 3*x1*y2+x1^2+y2+z0
 
--- ej2 :: Vect F2 (Lex String)
+ej2 :: Vect F2 (Lex String)
 -- --ej2 :: LexPoly F2 String
--- ej2 = x1+x1^34*y2^12
+ej2 = x4*x2^4+x1+x1^34*x2^12
 
 -- ej3 :: LexPoly F2 String
 -- ej3 = ej1^1000
