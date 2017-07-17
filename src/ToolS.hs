@@ -21,6 +21,23 @@ import Math.Core.Utils (toSet)
 
 import qualified Data.Set as S
 
+--- ------------------------------------------------------------------------------
+
+-- -- |(pickAux s) implements the axiom of choice (AC) but not randomly. In fact, as
+-- -- the data type is represented as a tree, we will choose its root.
+
+-- --pickAux :: S.Set a -> Maybe a
+-- pickAux Tip = Nothing
+-- pickAux (Bin _ x _ _) = Just x
+
+-- -- |(pick s) select an element from the set s.
+
+-- --pick :: S.Set a -> a
+-- pick s
+--   | Just r <- pickAux s = r
+--   | otherwise = error "pick: The empty set has no eligible element"
+
+
 -------------------------------------------------------------------------------
 
 -- | varsSet returns the set of variables which occurs in a polynomial. For
@@ -47,51 +64,55 @@ varsList :: (Foldable t
             , Ord k) =>
             t (Vect k (m v)) -> S.Set (Vect k (m v))
 varsList = foldr (\vs acc -> S.union acc (varsSet vs)) S.empty
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
--- -- | The function (deltaRule p x y) performs the independence rule described in
--- -- the paper [?]. It's important to note that p is the variable from wich we
--- -- derive and the one we would drop. For example:
--- -- λ> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (1:: LexPoly F2 String)
--- -- 1
--- -- λ> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (0:: LexPoly F2 String)
--- -- 0
--- -- λ> deltaRule (x1:: LexPoly F2 String) (x1:: LexPoly F2 String) (x1:: LexPoly F2 String)
--- -- 1
+-- | The function (deltaRule p x y) performs the independence rule described in
+-- the paper [?]. It's important to note that p is the variable from wich we
+-- derive and the one we would drop. For example:
+-- λ> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (1:: LexPoly F2 String)
+-- 1
+-- λ> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (0:: LexPoly F2 String)
+-- 0
+-- λ> deltaRule (x1:: LexPoly F2 String) (x1:: LexPoly F2 String) (x1:: LexPoly F2 String)
+-- 1
 
--- deltaRule :: (Eq k, Eq u, Num k, Ord (m u), Algebra k (m u),
---               MonomialConstructor m, Show (m u), Show u) =>
---              Vect k (m u) -> Vect k (m u) -> Vect k (m u) -> Vect k (m u)
--- deltaRule p a1 a2 = clean (1 + (1+a1*a2)*(1+a1*da2 + a2*da1 + da1*da2))
---   where da1 = deriv a1 p
---         da2 = deriv a2 p
+deltaRule :: (Eq k, Eq u, Num k, Ord (m u), Algebra k (m u),
+              MonomialConstructor m, Show (m u), Show u) =>
+             Vect k (m u) -> Vect k (m u) -> Vect k (m u) -> Vect k (m u)
+deltaRule p a1 a2 = clean (1 + (1+a1*a2)*(1+a1*da2 + a2*da1 + da1*da2))
+  where da1 = deriv a1 p
+        da2 = deriv a2 p
 
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
--- -- | deltaRuleList1Step apply deltaRule from p between every polynomial in the
--- -- first list and store the results in the accumulator (second list). For
--- -- exaple: 
--- -- λ> deltaRuleList1Step (x1:: LexPoly F2 String) ([x1]:: [LexPoly F2 String])
--- --       ([1]::[LexPoly F2 String]) 
--- -- [1,1]
--- -- λ> deltaRuleList1Step (x1:: LexPoly F2 String) ([x1,x1*x2,x1*x3]:: [LexPoly
--- --       F2 String]) ([]::[LexPoly F2 String]) 
--- -- [x3,x2x3,x2,x3,x2,1]
+-- | deltaRule1Step apply deltaRule from p between every polynomial in the
+-- first list and store the results in the accumulator (second list). For
+-- exaple: 
+-- λ> deltaRuleList1Step (x1:: LexPoly F2 String) ([x1]:: [LexPoly F2 String])
+--       ([1]::[LexPoly F2 String]) 
+-- [1,1]
+-- λ> deltaRuleList1Step (x1:: LexPoly F2 String) ([x1,x1*x2,x1*x3]:: [LexPoly
+--       F2 String]) ([]::[LexPoly F2 String]) 
+-- [x3,x2x3,x2,x3,x2,1]
 
--- deltaRuleList1Step ::
---   (Eq k
---   , Eq u
---   , Num k, Ord k
---   , Ord (m u)
---   , Algebra k (m u)
---   , MonomialConstructor m
---   , Show (m u), Show u) =>
---   Vect k (m u) -> [Vect k (m u)] -> [Vect k (m u)] -> [Vect k (m u)]
--- deltaRuleList1Step _  [] xs    = xs
--- deltaRuleList1Step p (x:xs) ys =
---  deltaRuleList1Step p xs (foldl' (\acc y -> ((deltaRule p x y):acc)) ys (x:xs))
+deltaRule1Step ::
+  (Eq k
+  , Eq u
+  , Num k, Ord k
+  , Ord (m u)
+  , Algebra k (m u)
+  , MonomialConstructor m
+  , Show (m u), Show u) =>
+  Vect k (m u) -> S.Set (Vect k (m u)) -> S.Set (Vect k (m u)) -> S.Set (Vect k (m u))
+deltaRule1Step v pps acum | S.null pps = acum
+                          | otherwise  = deltaRule1Step v ps miniStep
+  where (p,ps)   = S.deleteFindMin pps -- A pair form by the minimal element of
+                                       -- a set and the original set without
+                                       -- it. 
+        miniStep = foldl (\acc p' -> S.insert (deltaRule v p p') acc) acum pps 
+        
 
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
                                    
 -- -- |toolAux check if in any step of the algorithm a zero is obtained. In this
 -- -- case, the original set of formulas was unsatisfiable and the tool answer

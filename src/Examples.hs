@@ -22,6 +22,8 @@ import qualified Data.Set as Set
 example :: [LexPoly F2 String]
 example = [1,x1*x2+x1+x2,x1*x2+x1+1,x1*x2+1,x1*x2+x2+1]
 
+exampleSet = Set.fromList [1,x1*x2+x1+x2,x1*x2+x1+1,x1*x2+1,x1*x2+x2+1]
+
 -- monx :: Lex String
 -- --polx :: Vect F2 (Lex String)
 -- monx = Lex (M 1 [("x1",1)])
