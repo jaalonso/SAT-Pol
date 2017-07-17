@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-14 09:48:21.329308 UTC
+2017-07-17 13:16:27.286976 UTC
 
 interface SAT-Pol-0.1.0.0-CfnMeGgalar5P7rViiH2gc:ReadingF 8002
-  interface hash: b665088aee942cf54d2f8cf2774fb220
-  ABI hash: 5e730d0d3ba6334e9f5e875278657a52
-  export-list hash: 6074a1c20cd4ab15345fdfd901cbf911
+  interface hash: 8776237347ef79ce3b1bdefe82461b9a
+  ABI hash: 7470ab0e9abd2721a496ec98603b1d1b
+  export-list hash: 3a0ffb5bb8aa08955dbd8f3e29f47110
   orphan hash: 3c7d43334fa801966707ca7eec732540
   flag hash: cc34f77fbcbf6e6d5350ddfb862868c7
   sig of: Nothing
@@ -15,9 +15,11 @@ exports:
   ReadingF.disj
   ReadingF.main1
   ReadingF.main2
+  ReadingF.main3
+  ReadingF.main4
   ReadingF.var'
   ReadingF.varFold
-module dependencies: Examples PolAux Tool
+module dependencies: Examples PolAux Tool ToolS
 package dependencies: HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9
                       array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
                       containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz
@@ -47,6 +49,9 @@ import  -/  PolAux f76a52e75a7d1ed0135ccf56a5f79c80
 import  -/  Tool 44ac5ec346d7f5951e9a95e55818584c
   exports: 9fcd85e70c0c36c42cd255e78a2de8f3
   tool 7c599a5b75432c01aded83b625223c5d
+import  -/  ToolS f511e9e242536be025c7de93722553b7
+  exports: ed4106494c9ef46613aa6035a62146e5
+  toolS f0786fd9630bfa049ee8c0beebe31ecd
 import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
 import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
 import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
@@ -56,6 +61,8 @@ import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.Environment 08cb808e8e6a7821e6f8cfa76a977431
 import  -/  base-4.9.1.0:System.IO c9de64c5f5407c4cf1c52500c4d15200
+import  -/  containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz:Data.Set 0a21f3925a0d3a5e69c1f4a8e792bc80
+import  -/  containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz:Data.Set.Internal 0eaafc03eaf1eada07e1d85783ded885
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 9e60824f8bbe015b386abcb7539bd1a0
   $s$fAlgebrakLex ::
@@ -301,6 +308,23 @@ cc20f384e93a1a450f1ba14af4eb2c10
                          x `cast`
                          (Math.CommutativeAlgebra.Polynomial.N:Lex[0] <[GHC.Types.Char]>_N)))
                    s) -}
+03da8116e44f63e2cbc3d536603301aa
+  $sinsert_$sgo5 ::
+    Math.Algebras.VectorSpace.Vect
+      Math.Core.Field.F2
+      (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+    -> Math.Algebras.VectorSpace.Vect
+         Math.Core.Field.F2
+         (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+    -> Data.Set.Internal.Set
+         (Math.Algebras.VectorSpace.Vect
+            Math.Core.Field.F2
+            (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String))
+    -> Data.Set.Internal.Set
+         (Math.Algebras.VectorSpace.Vect
+            Math.Core.Field.F2
+            (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String))
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U> -}
 6e52c0d08aadd2ae8c15e45676fce412
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -449,97 +473,15 @@ cc20f384e93a1a450f1ba14af4eb2c10
                    Math.Core.Field.$fEqF2
                    Math.Core.Field.$fNumF2
                    GHC.Classes.$fOrd[]_$s$fOrd[]1) -}
-57b15b558a153f8fe0d3fa42983294f6
+ae752c8a87386f7768ee626c9f9fb5ca
   main1 :: GHC.IO.FilePath -> GHC.Types.IO ()
-  {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                ReadingF.main4
-                  `cast`
-                (<GHC.IO.FilePath>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-e7c37df47cf7a55f3503108070856538
-  main1_go ::
-    [GHC.Base.String]
-    -> [Math.Algebras.VectorSpace.Vect
-          Math.Core.Field.F2
-          (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)]
-  {- Arity: 1, Strictness: <S,1*U> -}
-2bedc101f695eede0cedb152e0c903b3
-  main2 :: GHC.IO.FilePath -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 ReadingF.main7
                   `cast`
                 (<GHC.IO.FilePath>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-71516f9260ae5919a603c99e89543b80
-  main2_go ::
-    [GHC.Base.String]
-    -> [Math.Algebras.VectorSpace.Vect
-          Math.Core.Field.F2
-          (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)]
-  {- Arity: 1, Strictness: <S,1*U> -}
-a6130715afb55721d149f34e80ded22e
-  main4 ::
-    GHC.IO.FilePath
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: (\ (f :: GHC.IO.FilePath)
-                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.IO.Handle.FD.openFile1
-                        f
-                        GHC.IO.IOMode.ReadMode
-                        eta of ds1 { (#,#) ipv ipv1 ->
-                 case GHC.IO.Handle.Text.hGetContents1
-                        ipv1
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   (Math.Algebras.VectorSpace.$w$cshowList
-                      @ Math.Core.Field.F2
-                      @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
-                      Math.Core.Field.$fShowF2
-                      ReadingF.$s$fNumVect_$s$fShowLex
-                      (Data.OldList.nubBy
-                         @ (Math.Algebras.VectorSpace.Vect
-                              Math.Core.Field.F2
-                              (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String))
-                         ReadingF.main5
-                           `cast`
-                         (Sym (Math.Algebras.VectorSpace.N:Vect[0]
-                                   <Math.Core.Field.F2>_R
-                                   <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R)
-                          ->_R Sym (Math.Algebras.VectorSpace.N:Vect[0]
-                                        <Math.Core.Field.F2>_R
-                                        <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R)
-                          ->_R <GHC.Types.Bool>_R)
-                         (ReadingF.main1_go (Data.OldList.lines ipv3)))
-                      (GHC.Types.[] @ GHC.Types.Char))
-                   GHC.Types.True
-                   ipv2 } }) -}
-7218e245f17c22056ff4a6d6a91b86b2
-  main5 ::
-    [(Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
-      Math.Core.Field.F2)]
-    -> [(Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
-         Math.Core.Field.F2)]
-    -> GHC.Types.Bool
-  {- Arity: 2,
-     Unfolding: (GHC.Classes.$fEq[]_$c==
-                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
-                      Math.Core.Field.F2)
-                   ReadingF.main6) -}
-39f952da17105d42e1d05a010f2406e7
-  main6 ::
-    GHC.Classes.Eq
-      (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
-       Math.Core.Field.F2)
-  {- Unfolding: (GHC.Classes.$fEq(,)
-                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
-                   @ Math.Core.Field.F2
-                   ReadingF.$s$fEqLex
-                   Math.Core.Field.$fEqF2) -}
-19323505453717949bceeb7279d45963
-  main7 ::
+55ebbd8e24b3cade64c0feca48a34d95
+  main10 ::
     GHC.IO.FilePath
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -569,7 +511,7 @@ a6130715afb55721d149f34e80ded22e
                               @ (Math.Algebras.VectorSpace.Vect
                                    Math.Core.Field.F2
                                    (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String))
-                              ReadingF.main5
+                              ReadingF.main8
                                 `cast`
                               (Sym (Math.Algebras.VectorSpace.N:Vect[0]
                                         <Math.Core.Field.F2>_R
@@ -584,6 +526,187 @@ a6130715afb55721d149f34e80ded22e
                       GHC.Types.True -> GHC.Show.shows17 })
                    GHC.Types.True
                    ipv2 } }) -}
+2ef1e7ea5a1f39650223244f93c18956
+  main11 ::
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (f :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        f
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.Base.++
+                      @ GHC.Types.Char
+                      Data.Set.Internal.$fShowSet1
+                      (Math.Algebras.VectorSpace.$w$cshowList
+                         @ Math.Core.Field.F2
+                         @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                         Math.Core.Field.$fShowF2
+                         ReadingF.$s$fNumVect_$s$fShowLex
+                         (Data.Set.Internal.$fDataSet1
+                            @ (Math.Algebras.VectorSpace.Vect
+                                 Math.Core.Field.F2
+                                 (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String))
+                            (GHC.Types.[]
+                               @ (Math.Algebras.VectorSpace.Vect
+                                    Math.Core.Field.F2
+                                    (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)))
+                            (ReadingF.main3_go (Data.OldList.lines ipv3)))
+                         (GHC.Types.[] @ GHC.Types.Char)))
+                   GHC.Types.True
+                   ipv2 } }) -}
+458d1011cc692cbdd470390d5e084f10
+  main12 ::
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (f :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        f
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (case ToolS.$wtoolS
+                           @ GHC.Base.String
+                           @ Math.CommutativeAlgebra.Polynomial.Lex
+                           @ Math.Core.Field.F2
+                           GHC.Classes.$fEq[]_$s$fEq[]1
+                           Math.CommutativeAlgebra.Polynomial.$fMonomialConstructorLex
+                           ReadingF.$s$fAlgebrakLex
+                           ReadingF.$s$fNumVect_$s$fOrdLex
+                           Math.Core.Field.$fOrdF2
+                           Math.Core.Field.$fNumF2
+                           (ReadingF.main4_go (Data.OldList.lines ipv3)) of wild {
+                      GHC.Types.False -> GHC.Show.shows18
+                      GHC.Types.True -> GHC.Show.shows17 })
+                   GHC.Types.True
+                   ipv2 } }) -}
+e7c37df47cf7a55f3503108070856538
+  main1_go ::
+    [GHC.Base.String]
+    -> [Math.Algebras.VectorSpace.Vect
+          Math.Core.Field.F2
+          (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)]
+  {- Arity: 1, Strictness: <S,1*U> -}
+fd5eef4b8e79290d23c49db0c8bd6207
+  main2 :: GHC.IO.FilePath -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                ReadingF.main10
+                  `cast`
+                (<GHC.IO.FilePath>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+71516f9260ae5919a603c99e89543b80
+  main2_go ::
+    [GHC.Base.String]
+    -> [Math.Algebras.VectorSpace.Vect
+          Math.Core.Field.F2
+          (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)]
+  {- Arity: 1, Strictness: <S,1*U> -}
+cbdc1a1f39c833b1cd272c3d8f7c291e
+  main3 :: GHC.IO.FilePath -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                ReadingF.main11
+                  `cast`
+                (<GHC.IO.FilePath>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+358198398d9723cb73ea38bcad9c81dd
+  main3_go ::
+    [GHC.Base.String]
+    -> Data.Set.Internal.Set
+         (Math.Algebras.VectorSpace.Vect
+            Math.Core.Field.F2
+            (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String))
+  {- Arity: 1, Strictness: <S,1*U> -}
+749325608af27f68c4ede8a5bf4f50fe
+  main4 :: GHC.IO.FilePath -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                ReadingF.main12
+                  `cast`
+                (<GHC.IO.FilePath>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+a7422424ad26490d050065826ea8c881
+  main4_go ::
+    [GHC.Base.String]
+    -> Data.Set.Internal.Set
+         (Math.Algebras.VectorSpace.Vect
+            Math.Core.Field.F2
+            (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String))
+  {- Arity: 1, Strictness: <S,1*U> -}
+70b5fa913bdec970ce4f0f6f71e8d079
+  main7 ::
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (f :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        f
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (Math.Algebras.VectorSpace.$w$cshowList
+                      @ Math.Core.Field.F2
+                      @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                      Math.Core.Field.$fShowF2
+                      ReadingF.$s$fNumVect_$s$fShowLex
+                      (Data.OldList.nubBy
+                         @ (Math.Algebras.VectorSpace.Vect
+                              Math.Core.Field.F2
+                              (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String))
+                         ReadingF.main8
+                           `cast`
+                         (Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                   <Math.Core.Field.F2>_R
+                                   <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R)
+                          ->_R Sym (Math.Algebras.VectorSpace.N:Vect[0]
+                                        <Math.Core.Field.F2>_R
+                                        <Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String>_R)
+                          ->_R <GHC.Types.Bool>_R)
+                         (ReadingF.main1_go (Data.OldList.lines ipv3)))
+                      (GHC.Types.[] @ GHC.Types.Char))
+                   GHC.Types.True
+                   ipv2 } }) -}
+7ccd80beacc99e07ef28398c8c80df78
+  main8 ::
+    [(Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+      Math.Core.Field.F2)]
+    -> [(Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+         Math.Core.Field.F2)]
+    -> GHC.Types.Bool
+  {- Arity: 2,
+     Unfolding: (GHC.Classes.$fEq[]_$c==
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+                      Math.Core.Field.F2)
+                   ReadingF.main9) -}
+146373283972278d01777887aec0bce8
+  main9 ::
+    GHC.Classes.Eq
+      (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String,
+       Math.Core.Field.F2)
+  {- Unfolding: (GHC.Classes.$fEq(,)
+                   @ (Math.CommutativeAlgebra.Polynomial.Lex GHC.Base.String)
+                   @ Math.Core.Field.F2
+                   ReadingF.$s$fEqLex
+                   Math.Core.Field.$fEqF2) -}
 876d856142038dde4d2cacf6c3897353
   var' ::
     (Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,

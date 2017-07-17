@@ -1,18 +1,18 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-14 10:48:33.172906 UTC
+2017-07-17 13:16:26.549911 UTC
 
 interface SAT-Pol-0.1.0.0-CfnMeGgalar5P7rViiH2gc:ToolS 8002
-  interface hash: ce5a2a45067a115f10ac5defc1058a8d
-  ABI hash: d9462473c67c2a1db4d3dd059f3cf912
-  export-list hash: 44b893bbc7cbf752bdae5e606a37658e
+  interface hash: 20b7c56296a12d97e8e6fe8e866bad83
+  ABI hash: f511e9e242536be025c7de93722553b7
+  export-list hash: ed4106494c9ef46613aa6035a62146e5
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: f6624f22fcdd76ed0ac6625466e2d712
   sig of: Nothing
   used TH splices: False
   where
 exports:
-  ToolS.tool
+  ToolS.toolS
 module dependencies: Examples PolAux
 package dependencies: HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9
                       array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
@@ -37,20 +37,20 @@ import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:M
 import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.CommutativeAlgebra.Polynomial b54042f0d44ec74552e332a486c1ec0b
 import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Core.Field 75661b1cf3e7c0e1ab0f62f78c950ef8
 import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Core.Utils 5681b0689a2f6e26ea9c0077f1ee1777
-import  -/  Examples 2ca37c64f1164d9ab49a876e8f9de3cd
-  exports: a437791fa41925cddf976f89ab96fc07
+import  -/  Examples 8e6fa4fda5f1a3d1426f9fa2d68ccc1b
+  exports: 5ed8308408ee2fa4beebee050baaa142
 import  -/  PolAux f76a52e75a7d1ed0135ccf56a5f79c80
   exports: b57020b84300bf532d83dddc777afd3c
   clean af1351ab5cca59308ff0417aba8b9c88
   deriv 25eb60d00e0997ae19d0ed4fdb5e7209
 import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
 import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
-import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz:Data.Set 0a21f3925a0d3a5e69c1f4a8e792bc80
+import  -/  containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz:Data.Set.Internal 0eaafc03eaf1eada07e1d85783ded885
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 526810aaa6829e6139596957aca0fcb7
   $trModule :: GHC.Types.Module
@@ -65,15 +65,28 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "SAT-Pol-0.1.0.0-CfnMeGgalar5P7rViiH2gc"#) -}
-1413398a55f753008acea858489ab4ac
-  $wtool ::
+991aa9f10b6146dc86a4b73f5b428877
+  $wtoolAux ::
+    (GHC.Classes.Ord k, GHC.Classes.Eq u,
+     Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,
+     Math.Algebras.Structures.Algebra k (m u), GHC.Classes.Ord (m u),
+     GHC.Num.Num k) =>
+    Data.Set.Internal.Set (Math.Algebras.VectorSpace.Vect k (m u))
+    -> Data.Set.Internal.Set (Math.Algebras.VectorSpace.Vect k (m u))
+    -> GHC.Types.Bool
+  {- Arity: 8,
+     Strictness: <L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),C(C1(U)))><L,U(C(U),C(U))><S(C(S)L),U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,1*U><S,U>,
+     Inline: [0] -}
+cf44656edd405ef6ce1aef473f7b616d
+  $wtoolS ::
     (GHC.Classes.Eq u,
      Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,
      Math.Algebras.Structures.Algebra k (m u), GHC.Classes.Ord (m u),
      GHC.Classes.Ord k, GHC.Num.Num k) =>
-    [Math.Algebras.VectorSpace.Vect k (m u)] -> GHC.Types.Bool
+    Data.Set.Internal.Set (Math.Algebras.VectorSpace.Vect k (m u))
+    -> GHC.Types.Bool
   {- Arity: 7,
-     Strictness: <L,U(C(C1(U)),C(C1(U)))><L,U(C(U),C(U))><L,U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,U>,
+     Strictness: <L,U(C(C1(U)),C(C1(U)))><L,U(C(U),C(U))><S(C(S)L),U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,U>,
      Inline: [0],
      Unfolding: (\ @ u
                    @ (m :: * -> *)
@@ -84,24 +97,65 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                    (w3 :: GHC.Classes.Ord (m u))
                    (w4 :: GHC.Classes.Ord k)
                    (w5 :: GHC.Num.Num k)
-                   (w6 :: [Math.Algebras.VectorSpace.Vect k (m u)]) ->
+                   (w6 :: Data.Set.Internal.Set
+                            (Math.Algebras.VectorSpace.Vect k (m u))) ->
                  let {
-                   f :: Math.Algebras.VectorSpace.Vect k (m u)
-                        -> [Math.Algebras.VectorSpace.Vect k (m u)]
+                   lvl2 :: Math.Algebras.VectorSpace.Vect k (m u)
+                           -> [Math.Algebras.VectorSpace.Vect k (m u)]
                    = Math.CommutativeAlgebra.Polynomial.vars @ k @ m @ u w5 w4 w1 w3
                  } in
+                 let {
+                   $dOrd :: GHC.Classes.Ord (Math.Algebras.VectorSpace.Vect k (m u))
+                   = Math.Algebras.VectorSpace.$fOrdVect @ k @ (m u) w4 w3
+                 } in
                  letrec {
-                   go :: [Math.Algebras.VectorSpace.Vect k (m u)]
-                         -> [Math.Algebras.VectorSpace.Vect k (m u)]
-                     {- Arity: 1, Strictness: <S,1*U> -}
-                   = \ (ds :: [Math.Algebras.VectorSpace.Vect k (m u)]) ->
+                   go5 :: Data.Set.Internal.Set
+                            (Math.Algebras.VectorSpace.Vect k (m u))
+                          -> Data.Set.Internal.Set (Math.Algebras.VectorSpace.Vect k (m u))
+                          -> Data.Set.Internal.Set (Math.Algebras.VectorSpace.Vect k (m u))
+                     {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+                   = \ (z' :: Data.Set.Internal.Set
+                                (Math.Algebras.VectorSpace.Vect k (m u)))
+                       (ds :: Data.Set.Internal.Set
+                                (Math.Algebras.VectorSpace.Vect k (m u))) ->
                      case ds of wild {
-                       [] -> GHC.Types.[] @ (Math.Algebras.VectorSpace.Vect k (m u))
-                       : y ys
-                       -> GHC.Base.++
-                            @ (Math.Algebras.VectorSpace.Vect k (m u))
-                            (f y)
-                            (go ys) }
+                       Data.Set.Internal.Bin dt x l r
+                       -> case lvl2 x of wild1 {
+                            []
+                            -> go5
+                                 (Data.Set.Internal.union
+                                    @ (Math.Algebras.VectorSpace.Vect k (m u))
+                                    $dOrd
+                                    (go5 z' r)
+                                    (Data.Set.Internal.Tip
+                                       @ (Math.Algebras.VectorSpace.Vect k (m u))))
+                                 l
+                            : x0 xs0
+                            -> case x0
+                                      `cast`
+                                    (Math.Algebras.VectorSpace.N:Vect[0]
+                                         <k>_R <m u>_R) of nt { DEFAULT ->
+                               go5
+                                 (Data.Set.Internal.union
+                                    @ (Math.Algebras.VectorSpace.Vect k (m u))
+                                    $dOrd
+                                    (go5 z' r)
+                                    (Data.Set.Internal.$wpoly_go
+                                       @ (Math.Algebras.VectorSpace.Vect k (m u))
+                                       1#
+                                       (Data.Set.Internal.Bin
+                                          @ (Math.Algebras.VectorSpace.Vect k (m u))
+                                          1#
+                                          nt
+                                            `cast`
+                                          (Sym (Math.Algebras.VectorSpace.N:Vect[0] <k>_R <m u>_R))
+                                          (Data.Set.Internal.Tip
+                                             @ (Math.Algebras.VectorSpace.Vect k (m u)))
+                                          (Data.Set.Internal.Tip
+                                             @ (Math.Algebras.VectorSpace.Vect k (m u))))
+                                       xs0))
+                                 l } }
+                       Data.Set.Internal.Tip -> z' }
                  } in
                  ToolS.$wtoolAux
                    @ k
@@ -113,41 +167,20 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                    w2
                    w3
                    w5
-                   (Data.OldList.nubBy
-                      @ (Math.Algebras.VectorSpace.Vect k (m u))
-                      (GHC.Classes.$fEq[]_$c==
-                         @ (m u, k)
-                         (GHC.Classes.$fEq(,)
-                            @ (m u)
-                            @ k
-                            (GHC.Classes.$p1Ord @ (m u) w3)
-                            (GHC.Classes.$p1Ord @ k w4)))
-                        `cast`
-                      (Sym (Math.Algebras.VectorSpace.N:Vect[0] <k>_R <m u>_R)
-                       ->_R Sym (Math.Algebras.VectorSpace.N:Vect[0] <k>_R <m u>_R)
-                       ->_R <GHC.Types.Bool>_R)
-                      (go w6))
+                   (go5
+                      (Data.Set.Internal.Tip @ (Math.Algebras.VectorSpace.Vect k (m u)))
+                      w6)
                    w6) -}
-a5faf808bf52ae09bfd9b1d1bde23717
-  $wtoolAux ::
-    (GHC.Classes.Ord k, GHC.Classes.Eq u,
-     Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,
-     Math.Algebras.Structures.Algebra k (m u), GHC.Classes.Ord (m u),
-     GHC.Num.Num k) =>
-    [Math.Algebras.VectorSpace.Vect k (m u)]
-    -> [Math.Algebras.VectorSpace.Vect k (m u)] -> GHC.Types.Bool
-  {- Arity: 8,
-     Strictness: <L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),C(C1(U)))><L,U(C(U),C(U))><L,U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,1*U><S,1*U>,
-     Inline: [0] -}
-a8b3c829ef62b1112e7fe3fb13983e45
-  tool ::
+f0786fd9630bfa049ee8c0beebe31ecd
+  toolS ::
     (GHC.Classes.Eq u, GHC.Show.Show (m u), GHC.Show.Show u,
      Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,
      Math.Algebras.Structures.Algebra k (m u), GHC.Classes.Ord (m u),
      GHC.Classes.Ord k, GHC.Num.Num k) =>
-    [Math.Algebras.VectorSpace.Vect k (m u)] -> GHC.Types.Bool
+    Data.Set.Internal.Set (Math.Algebras.VectorSpace.Vect k (m u))
+    -> GHC.Types.Bool
   {- Arity: 9,
-     Strictness: <L,U(C(C1(U)),C(C1(U)))><L,A><L,A><L,U(C(U),C(U))><L,U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,U>,
+     Strictness: <L,U(C(C1(U)),C(C1(U)))><L,A><L,A><L,U(C(U),C(U))><S(C(S)L),U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,U>,
      Inline: INLINE[0],
      Unfolding: InlineRule (9, True, True)
                 (\ @ u
@@ -161,8 +194,9 @@ a8b3c829ef62b1112e7fe3fb13983e45
                    (w5 :: GHC.Classes.Ord (m u))
                    (w6 :: GHC.Classes.Ord k)
                    (w7 :: GHC.Num.Num k)
-                   (w8 :: [Math.Algebras.VectorSpace.Vect k (m u)]) ->
-                 ToolS.$wtool @ u @ m @ k w w3 w4 w5 w6 w7 w8) -}
+                   (w8 :: Data.Set.Internal.Set
+                            (Math.Algebras.VectorSpace.Vect k (m u))) ->
+                 ToolS.$wtoolS @ u @ m @ k w w3 w4 w5 w6 w7 w8) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

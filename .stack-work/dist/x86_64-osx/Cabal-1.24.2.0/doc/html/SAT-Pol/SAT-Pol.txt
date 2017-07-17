@@ -11,6 +11,8 @@
 module Examples
 x1 :: LexPoly F2 String
 example :: [LexPoly F2 String]
+exampleSet :: Set (LexPoly F2 String)
+ej2 :: Vect F2 (Lex String)
 
 module PolAux
 
@@ -56,3 +58,37 @@ main2 :: FilePath -> IO ()
 varFold :: [String] -> Vect F2 (Lex String)
 var' :: (MonomialConstructor m, Algebra k (m [Char]), Show (m [Char]), Ord (m [Char]), Eq k, Num k) => [Char] -> Vect k (m [Char])
 disj :: Num a => a -> a -> a
+
+
+-- | This module aims to provide an efficient tool to solve the SAT
+--   problem. Both the algorithm and the implementation have been carried
+--   out by the researchers from the department of Computer Science and
+--   Artificial Intelligence at the University of Seville.
+module ToolS
+
+-- | varsSet returns the set of variables which occurs in a polynomial. For
+--   example: λ&gt; varsSet (x2*x3+x1) fromList [x1,x2,x3] λ&gt; varsSet
+--   (x1) fromList [x1]
+varsSet :: (Ord (m v), Num k, Ord k, MonomialConstructor m) => Vect k (m v) -> Set (Vect k (m v))
+
+-- | varsList xs returns the set of variables which occurs in any
+--   polynomial of the set xs. For example:
+varsList :: (Foldable t, Num k, MonomialConstructor m, Ord (m v), Ord k) => t (Vect k (m v)) -> Set (Vect k (m v))
+
+-- | The function (deltaRule p x y) performs the independence rule
+--   described in the paper [?]. It's important to note that p is the
+--   variable from wich we derive and the one we would drop. For example:
+--   &gt;&gt;&gt; deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2
+--   String) (1:: LexPoly F2 String) 1 &gt;&gt;&gt; deltaRule (x1:: LexPoly
+--   F2 String) (1:: LexPoly F2 String) (0:: LexPoly F2 String) 0
+--   &gt;&gt;&gt; deltaRule (x1:: LexPoly F2 String) (x1:: LexPoly F2
+--   String) (x1:: LexPoly F2 String) 1
+deltaRule :: (Eq k, Eq u, Num k, Ord (m u), Algebra k (m u), MonomialConstructor m, Show (m u), Show u) => Vect k (m u) -> Vect k (m u) -> Vect k (m u) -> Vect k (m u)
+
+-- | deltaRule1Step apply deltaRule from p between every polynomial in the
+--   first list and store the results in the accumulator (second list). For
+--   exaple: λ&gt; deltaRuleList1Step (x1:: LexPoly F2 String) ([x1]::
+--   [LexPoly F2 String]) ([1]::[LexPoly F2 String]) [1,1] λ&gt;
+--   deltaRuleList1Step (x1:: LexPoly F2 String) ([x1,x1*x2,x1*x3]::
+--   [LexPoly F2 String]) ([]::[LexPoly F2 String]) [x3,x2x3,x2,x3,x2,1]
+deltaRule1Step :: (Eq k, Eq u, Num k, Ord k, Ord (m u), Algebra k (m u), MonomialConstructor m, Show (m u), Show u) => Vect k (m u) -> Set (Vect k (m u)) -> Set (Vect k (m u)) -> Set (Vect k (m u))

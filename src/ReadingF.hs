@@ -16,6 +16,9 @@ import Math.Core.Utils (toSet)
 
 import PolAux
 import Tool (tool)
+import ToolS (toolS)
+
+import qualified Data.Set as S
 
 -------------------------------------------------------------------------------
 
@@ -30,6 +33,22 @@ main1 f = do
 main2 f = do
   s <- readFile f
   print $ tool $ nub $ (foldr (\x acc -> (((clean . varFold . words) x):acc)) []) $ lines $ s 
+
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+
+main3 f = do
+  s <- readFile f
+  print $ (foldr (\x acc -> (S.insert ((clean . varFold . words) x) acc)) S.empty) $ lines $ s
+
+-------------------------------------------------------------------------------
+
+-- main2 "/Users/danielrodriguezchavarria/Desktop/300/ReadingFiles/fil3.txt"
+
+main4 f = do
+  s <- readFile f
+  print $ toolS $ (foldr (\x acc -> (S.insert ((clean . varFold . words) x) acc)) S.empty) $ lines $ s 
 
 -------------------------------------------------------------------------------
   

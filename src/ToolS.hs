@@ -4,8 +4,8 @@
 -- Intelligence at the University of Seville.
 
 module ToolS
-    --( tool,)
-where
+    ( toolS,      
+    ) where
 
 import Data.List(nub,iterate,partition, foldl', union)
 
@@ -69,11 +69,11 @@ varsList = foldr (\vs acc -> S.union acc (varsSet vs)) S.empty
 -- | The function (deltaRule p x y) performs the independence rule described in
 -- the paper [?]. It's important to note that p is the variable from wich we
 -- derive and the one we would drop. For example:
--- λ> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (1:: LexPoly F2 String)
+-- >>> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (1:: LexPoly F2 String)
 -- 1
--- λ> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (0:: LexPoly F2 String)
+-- >>> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (0:: LexPoly F2 String)
 -- 0
--- λ> deltaRule (x1:: LexPoly F2 String) (x1:: LexPoly F2 String) (x1:: LexPoly F2 String)
+-- >>> deltaRule (x1:: LexPoly F2 String) (x1:: LexPoly F2 String) (x1:: LexPoly F2 String)
 -- 1
 
 deltaRule :: (Eq k, Eq u, Num k, Ord (m u), Algebra k (m u),
@@ -114,49 +114,51 @@ deltaRule1Step v pps acum | S.null pps = acum
 
 -------------------------------------------------------------------------------
                                    
--- -- |toolAux check if in any step of the algorithm a zero is obtained. In this
--- -- case, the original set of formulas was unsatisfiable and the tool answer
--- -- would be "False". Otherwise, the set of polynomials is divided in two subsets,
--- -- one contains those polynomials in which occurs the variable p, while the
--- -- other store the rest.
+-- |toolAux check if in any step of the algorithm a zero is obtained. In this
+-- case, the original set of formulas was unsatisfiable and the tool answer
+-- would be "False". Otherwise, the set of polynomials is divided in two subsets,
+-- one contains those polynomials in which occurs the variable p, while the
+-- other store the rest.
 
--- -- We should think if there exists any way to use the lazy power in the search
--- -- of zeros.
+-- We should think if there exists any way to use the lazy power in the search
+-- of zeros.
 
 
--- toolAux :: (Eq k
---            , Ord k
---            , Eq u
---            , Show (m u)
---            , Show u
---            , MonomialConstructor m
---            , Algebra k (m u)
---            , Ord (m u)
---            , Num k) =>
---            [Vect k (m u)] -> [Vect k (m u)] -> Bool
--- toolAux [] xs     = if (elem 0 xs) then False else True
--- toolAux (p:ps) xs = if (elem 0 ys) then False else (toolAux ps ys)
---   where (xs1,xs2) = partition (\x -> elem p (vars x)) xs
---         ys = nub (deltaRuleList1Step p xs1 xs2)
+toolAux :: (Eq k
+           , Ord k
+           , Eq u
+           , Show (m u)
+           , Show u
+           , MonomialConstructor m
+           , Algebra k (m u)
+           , Ord (m u)
+           , Num k) =>
+           S.Set (Vect k (m u)) -> S.Set (Vect k (m u)) -> Bool
+toolAux vvs ps | null vs        = S.notMember 0 ps
+               | S.member 0 ps  = False
+               | otherwise      = toolAux vs ps'
+          where (v,vs)    = S.deleteFindMin vvs
+                (ps1,ps2) = S.partition (\p -> elem v (vars p)) ps -- time leak
+                ps'       = deltaRule1Step v ps1 ps2
 
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
--- -- |tool decides if the set of formulas that produced the set of polynomials
--- -- were satisfiables. The function input is a list of polynomials because the
--- -- transformation from formula to polynomial is handled by ReadingF.hs module.
+-- |tool decides if the set of formulas that produced the set of polynomials
+-- were satisfiables. The function input is a list of polynomials because the
+-- transformation from formula to polynomial is handled by ReadingF.hs module.
 
--- tool :: (Eq u
---         , Show (m u)
---         , Show u
---         , MonomialConstructor m
---         , Algebra k (m u)
---         , Ord (m u)
---         , Ord k
---         , Num k) =>
---         [Vect k (m u)] -> Bool
--- tool xs = toolAux (varsList xs) xs
+toolS :: (Eq u
+         , Show (m u)
+         , Show u
+         , MonomialConstructor m
+         , Algebra k (m u)
+         , Ord (m u)
+         , Ord k
+         , Num k) =>
+         S.Set (Vect k (m u)) -> Bool
+toolS xs = toolAux (varsList xs) xs
 
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 
 

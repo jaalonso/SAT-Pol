@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-17 10:53:58.895067 UTC
+2017-07-17 11:46:36.867761 UTC
 
 interface SAT-Pol-0.1.0.0-CfnMeGgalar5P7rViiH2gc:PolAux 8002
-  interface hash: c614845e430b29e913d7c61916fe2e21
+  interface hash: 93154373c96f05b93ddbd21a9c8e6ab0
   ABI hash: f76a52e75a7d1ed0135ccf56a5f79c80
   export-list hash: b57020b84300bf532d83dddc777afd3c
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -38,8 +38,8 @@ import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:M
 import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.CommutativeAlgebra.Polynomial b54042f0d44ec74552e332a486c1ec0b
 import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Core.Field 75661b1cf3e7c0e1ab0f62f78c950ef8
 import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Core.Utils 5681b0689a2f6e26ea9c0077f1ee1777
-import  -/  Examples d013e24465f0376951369d883930115c
-  exports: e7bb33234d58e7b3384b6360fec5b75b
+import  -/  Examples 8e6fa4fda5f1a3d1426f9fa2d68ccc1b
+  exports: 5ed8308408ee2fa4beebee050baaa142
 import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
 import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
 import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
