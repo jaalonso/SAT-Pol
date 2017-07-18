@@ -1,161 +1,21 @@
 Configuring QuickCheck-2.9.2...
 Building QuickCheck-2.9.2...
 Preprocessing library QuickCheck-2.9.2...
-[ 1 of 15] Compiling Test.QuickCheck.Random ( Test/QuickCheck/Random.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Random.o )
-[ 2 of 15] Compiling Test.QuickCheck.Gen ( Test/QuickCheck/Gen.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Gen.o )
-[ 3 of 15] Compiling Test.QuickCheck.Gen.Unsafe ( Test/QuickCheck/Gen/Unsafe.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Gen/Unsafe.o )
-[ 4 of 15] Compiling Test.QuickCheck.Exception ( Test/QuickCheck/Exception.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Exception.o )
-[ 5 of 15] Compiling Test.QuickCheck.Text ( Test/QuickCheck/Text.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Text.o )
-[ 6 of 15] Compiling Test.QuickCheck.State ( Test/QuickCheck/State.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/State.o )
-[ 7 of 15] Compiling Test.QuickCheck.Arbitrary ( Test/QuickCheck/Arbitrary.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Arbitrary.o )
-[ 8 of 15] Compiling Test.QuickCheck.Modifiers ( Test/QuickCheck/Modifiers.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Modifiers.o )
-[ 9 of 15] Compiling Test.QuickCheck.Poly ( Test/QuickCheck/Poly.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Poly.o )
-[10 of 15] Compiling Test.QuickCheck.Function ( Test/QuickCheck/Function.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Function.o )
-[11 of 15] Compiling Test.QuickCheck.Property ( Test/QuickCheck/Property.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Property.o )
-[12 of 15] Compiling Test.QuickCheck.Monadic ( Test/QuickCheck/Monadic.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Monadic.o )
-[13 of 15] Compiling Test.QuickCheck.Test ( Test/QuickCheck/Test.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/Test.o )
-[14 of 15] Compiling Test.QuickCheck.All ( Test/QuickCheck/All.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck/All.o )
-[15 of 15] Compiling Test.QuickCheck  ( Test/QuickCheck.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Test/QuickCheck.o )
-Running Haddock for QuickCheck-2.9.2...
-Preprocessing library QuickCheck-2.9.2...
-Haddock coverage:
-  10% (  2 / 20) in 'Test.QuickCheck.Random'
-  Missing documentation for:
-    newTheGen (Test/QuickCheck/Random.hs:17)
-    bits (Test/QuickCheck/Random.hs:20)
-    mask (Test/QuickCheck/Random.hs:20)
-    doneBit (Test/QuickCheck/Random.hs:20)
-    chip (Test/QuickCheck/Random.hs:25)
-    chop (Test/QuickCheck/Random.hs:30)
-    stop (Test/QuickCheck/Random.hs:33)
-    mkTheGen (Test/QuickCheck/Random.hs:36)
-     (Test/QuickCheck/Random.hs:65)
-     (Test/QuickCheck/Random.hs:67)
-     (Test/QuickCheck/Random.hs:70)
-    newQCGen (Test/QuickCheck/Random.hs:79)
-    mkQCGen (Test/QuickCheck/Random.hs:82)
-    bigNatVariant (Test/QuickCheck/Random.hs:85)
-    natVariant (Test/QuickCheck/Random.hs:91)
-    variantTheGen (Test/QuickCheck/Random.hs:97)
-    boolVariant (Test/QuickCheck/Random.hs:103)
-    variantQCGen (Test/QuickCheck/Random.hs:107)
-  90% ( 26 / 29) in 'Test.QuickCheck.Gen'
-  Missing documentation for:
-     (Test/QuickCheck/Gen.hs:49)
-     (Test/QuickCheck/Gen.hs:53)
-     (Test/QuickCheck/Gen.hs:57)
-  80% (  4 /  5) in 'Test.QuickCheck.Gen.Unsafe'
-  Missing documentation for:
-    Capture (Test/QuickCheck/Gen/Unsafe.hs:50)
-  33% (  3 /  9) in 'Test.QuickCheck.Exception'
-  Missing documentation for:
-    AnException (Test/QuickCheck/Exception.hs:23)
-    tryEvaluate (Test/QuickCheck/Exception.hs:55)
-    tryEvaluateIO (Test/QuickCheck/Exception.hs:58)
-    evaluate (Test/QuickCheck/Exception.hs:62)
-    isDiscard (Test/QuickCheck/Exception.hs:81)
-    finally (Test/QuickCheck/Exception.hs:96)
-   6% (  1 / 18) in 'Test.QuickCheck.Text'
-  Missing documentation for:
-    Str (Test/QuickCheck/Text.hs:47)
-    ranges (Test/QuickCheck/Text.hs:52)
-    number (Test/QuickCheck/Text.hs:60)
-    short (Test/QuickCheck/Text.hs:63)
-    showErr (Test/QuickCheck/Text.hs:71)
-    oneLine (Test/QuickCheck/Text.hs:74)
-    isOneLine (Test/QuickCheck/Text.hs:77)
-    bold (Test/QuickCheck/Text.hs:80)
-    newTerminal (Test/QuickCheck/Text.hs:91)
-    withStdioTerminal (Test/QuickCheck/Text.hs:105)
-    withNullTerminal (Test/QuickCheck/Text.hs:111)
-    terminalOutput (Test/QuickCheck/Text.hs:115)
-    handle (Test/QuickCheck/Text.hs:118)
-    Terminal (Test/QuickCheck/Text.hs:88)
-    putTemp (Test/QuickCheck/Text.hs:129)
-    putPart (Test/QuickCheck/Text.hs:129)
-    putLine (Test/QuickCheck/Text.hs:129)
- 100% (  2 /  2) in 'Test.QuickCheck.State'
- 100% ( 31 / 31) in 'Test.QuickCheck.Arbitrary'
-  93% ( 14 / 15) in 'Test.QuickCheck.Modifiers'
-  Missing documentation for:
-    ShrinkState (Test/QuickCheck/Modifiers.hs:323)
-  14% (  1 /  7) in 'Test.QuickCheck.Poly'
-  Missing documentation for:
-    A (Test/QuickCheck/Poly.hs:29)
-    B (Test/QuickCheck/Poly.hs:44)
-    C (Test/QuickCheck/Poly.hs:59)
-    OrdA (Test/QuickCheck/Poly.hs:77)
-    OrdB (Test/QuickCheck/Poly.hs:96)
-    OrdC (Test/QuickCheck/Poly.hs:115)
-  73% (  8 / 11) in 'Test.QuickCheck.Function'
-  Missing documentation for:
-    Fun (Test/QuickCheck/Function.hs:452)
-    apply (Test/QuickCheck/Function.hs:466)
-    Function (Test/QuickCheck/Function.hs:138)
-  62% ( 45 / 72) in 'Test.QuickCheck.Property'
-  Missing documentation for:
-     (Test/QuickCheck/Property.hs:81)
-     (Test/QuickCheck/Property.hs:84)
-     (Test/QuickCheck/Property.hs:87)
-     (Test/QuickCheck/Property.hs:90)
-     (Test/QuickCheck/Property.hs:93)
-     (Test/QuickCheck/Property.hs:96)
-     (Test/QuickCheck/Property.hs:118)
-    protect (Test/QuickCheck/Property.hs:122)
-    Prop (Test/QuickCheck/Property.hs:128)
-    Rose (Test/QuickCheck/Property.hs:132)
-    ioRose (Test/QuickCheck/Property.hs:135)
-    joinRose (Test/QuickCheck/Property.hs:138)
-     (Test/QuickCheck/Property.hs:147)
-     (Test/QuickCheck/Property.hs:152)
-     (Test/QuickCheck/Property.hs:157)
-    CallbackKind (Test/QuickCheck/Property.hs:191)
-    exception (Test/QuickCheck/Property.hs:207)
-    formatException (Test/QuickCheck/Property.hs:213)
-    protectResult (Test/QuickCheck/Property.hs:218)
-    succeeded (Test/QuickCheck/Property.hs:221)
-    failed (Test/QuickCheck/Property.hs:221)
-    rejected (Test/QuickCheck/Property.hs:221)
-    liftBool (Test/QuickCheck/Property.hs:242)
-    mapResult (Test/QuickCheck/Property.hs:246)
-    mapTotalResult (Test/QuickCheck/Property.hs:249)
-    mapRoseResult (Test/QuickCheck/Property.hs:253)
-    mapProp (Test/QuickCheck/Property.hs:256)
-  78% ( 14 / 18) in 'Test.QuickCheck.Monadic'
-  Missing documentation for:
-    stop (Test/QuickCheck/Monadic.hs:118)
-    monadic (Test/QuickCheck/Monadic.hs:204)
-    monadic' (Test/QuickCheck/Monadic.hs:207)
-    runSTGen (Test/QuickCheck/Monadic.hs:246)
-  50% ( 14 / 28) in 'Test.QuickCheck.Test'
-  Missing documentation for:
-    test (Test/QuickCheck/Test.hs:193)
-    doneTesting (Test/QuickCheck/Test.hs:199)
-    giveUp (Test/QuickCheck/Test.hs:229)
-    runATest (Test/QuickCheck/Test.hs:245)
-    summary (Test/QuickCheck/Test.hs:311)
-    success (Test/QuickCheck/Test.hs:322)
-    labelPercentage (Test/QuickCheck/Test.hs:352)
-    insufficientCoverage (Test/QuickCheck/Test.hs:360)
-    foundFailure (Test/QuickCheck/Test.hs:367)
-    localMin (Test/QuickCheck/Test.hs:371)
-    localMin' (Test/QuickCheck/Test.hs:401)
-    localMinFound (Test/QuickCheck/Test.hs:413)
-    callbackPostTest (Test/QuickCheck/Test.hs:438)
-    callbackPostFinalFailure (Test/QuickCheck/Test.hs:443)
- 100% (  9 /  9) in 'Test.QuickCheck.All'
-  99% (127 /128) in 'Test.QuickCheck'
-  Missing documentation for:
-    ShrinkState (Test/QuickCheck/Modifiers.hs:323)
-Warning: Test.QuickCheck.Arbitrary: could not find link destinations for:
-    GCoArbitrary RecursivelyShrink GSubterms gSubterms gSubtermsIncl
-Warning: Test.QuickCheck.Function: could not find link destinations for:
-    GFunction
-Warning: Test.QuickCheck: could not find link destinations for:
-    GCoArbitrary RecursivelyShrink GSubterms
-Documentation created:
-.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/QuickCheck/index.html,
-.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/QuickCheck/QuickCheck.txt
+[ 1 of 15] Compiling Test.QuickCheck.Random ( Test/QuickCheck/Random.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Random.o )
+[ 2 of 15] Compiling Test.QuickCheck.Gen ( Test/QuickCheck/Gen.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Gen.o )
+[ 3 of 15] Compiling Test.QuickCheck.Gen.Unsafe ( Test/QuickCheck/Gen/Unsafe.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Gen/Unsafe.o )
+[ 4 of 15] Compiling Test.QuickCheck.Exception ( Test/QuickCheck/Exception.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Exception.o )
+[ 5 of 15] Compiling Test.QuickCheck.Text ( Test/QuickCheck/Text.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Text.o )
+[ 6 of 15] Compiling Test.QuickCheck.State ( Test/QuickCheck/State.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/State.o )
+[ 7 of 15] Compiling Test.QuickCheck.Arbitrary ( Test/QuickCheck/Arbitrary.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Arbitrary.o )
+[ 8 of 15] Compiling Test.QuickCheck.Modifiers ( Test/QuickCheck/Modifiers.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Modifiers.o )
+[ 9 of 15] Compiling Test.QuickCheck.Poly ( Test/QuickCheck/Poly.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Poly.o )
+[10 of 15] Compiling Test.QuickCheck.Function ( Test/QuickCheck/Function.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Function.o )
+[11 of 15] Compiling Test.QuickCheck.Property ( Test/QuickCheck/Property.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Property.o )
+[12 of 15] Compiling Test.QuickCheck.Monadic ( Test/QuickCheck/Monadic.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Monadic.o )
+[13 of 15] Compiling Test.QuickCheck.Test ( Test/QuickCheck/Test.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/Test.o )
+[14 of 15] Compiling Test.QuickCheck.All ( Test/QuickCheck/All.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck/All.o )
+[15 of 15] Compiling Test.QuickCheck  ( Test/QuickCheck.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Test/QuickCheck.o )
 Installing library in
-/Users/danielrodriguezchavarria/SAT-Pol/.stack-work/install/x86_64-osx/lts-8.22/8.0.2/lib/x86_64-osx-ghc-8.0.2/QuickCheck-2.9.2-LmiHRFRrRt53hwJNS0Ioz0
+/home/jalonso/Dropbox/alonso/estudio/SAT-Pol/.stack-work/install/x86_64-linux/lts-8.22/8.0.2/lib/x86_64-linux-ghc-8.0.2/QuickCheck-2.9.2-LmiHRFRrRt53hwJNS0Ioz0
 Registering QuickCheck-2.9.2...

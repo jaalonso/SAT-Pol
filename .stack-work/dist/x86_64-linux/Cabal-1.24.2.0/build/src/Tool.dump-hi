@@ -1,0 +1,213 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-18 16:19:59.366664 UTC
+
+interface SAT-Pol-0.1.0.0-CfnMeGgalar5P7rViiH2gc:Tool 8002
+  interface hash: 02b3724ecda0c1ff58fc234486d2af1d
+  ABI hash: a1f0f2a01166b32f697cb035761adfd5
+  export-list hash: 1338835f5d130848e8e6f38e8c759d1e
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ab396f11155bd696ab63895436e6f1df
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Tool.tool
+  Tool.varsList
+module dependencies: Examples PolAux
+package dependencies: HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Algebras.Structures
+         HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.CommutativeAlgebra.Polynomial
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz:Data.Set.Internal
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Algebras.Structures cbf553a388e500de36f995a8d89172a4
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Algebras.TensorProduct c053039aae50bcc7df2c155eefb8e506
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Algebras.VectorSpace 6cba24ab7ee9b5f302ba65e0ee801d61
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.CommutativeAlgebra.Polynomial c7dfc0a11b8634b439ae5817bdafa9d0
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Core.Field 75661b1cf3e7c0e1ab0f62f78c950ef8
+import  -/  HaskellForMaths-0.4.8@HaskellForMaths-0.4.8-8QcC8dcD7HF183G9RK8zU9:Math.Core.Utils e8d4344d39cc226f5c5792a794aef4e4
+import  -/  Examples f96905f064774e5fcb5305995f909891
+  exports: 57158dab1915eb85d42e3823d14af835
+import  -/  PolAux f76a52e75a7d1ed0135ccf56a5f79c80
+  exports: b57020b84300bf532d83dddc777afd3c
+  clean af1351ab5cca59308ff0417aba8b9c88
+  deriv 25eb60d00e0997ae19d0ed4fdb5e7209
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  containers-0.5.10.2@containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz:Data.Set 0a21f3925a0d3a5e69c1f4a8e792bc80
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+7ab7a0393ac552bbe34d7c2cdac45047
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Tool.$trModule2 Tool.$trModule1) -}
+34a4c308981d178d8bf5bddc333162e2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Tool"#) -}
+444728cc8d4134798bb57c02358d15f7
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "SAT-Pol-0.1.0.0-CfnMeGgalar5P7rViiH2gc"#) -}
+def64cbd6a94e1a9e8c63b1419999bd9
+  $wtool ::
+    (GHC.Classes.Eq u,
+     Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,
+     Math.Algebras.Structures.Algebra k (m u), GHC.Classes.Ord (m u),
+     GHC.Classes.Ord k, GHC.Num.Num k) =>
+    [Math.Algebras.VectorSpace.Vect k (m u)] -> GHC.Types.Bool
+  {- Arity: 7,
+     Strictness: <L,U(C(C1(U)),C(C1(U)))><L,U(C(U),C(U))><L,U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ u
+                   @ (m :: * -> *)
+                   @ k
+                   (w :: GHC.Classes.Eq u)
+                   (w1 :: Math.CommutativeAlgebra.Polynomial.MonomialConstructor m)
+                   (w2 :: Math.Algebras.Structures.Algebra k (m u))
+                   (w3 :: GHC.Classes.Ord (m u))
+                   (w4 :: GHC.Classes.Ord k)
+                   (w5 :: GHC.Num.Num k)
+                   (w6 :: [Math.Algebras.VectorSpace.Vect k (m u)]) ->
+                 Tool.$wtoolAux
+                   @ k
+                   @ u
+                   @ m
+                   w4
+                   w
+                   w1
+                   w2
+                   w3
+                   w5
+                   (Tool.varsList
+                      @ []
+                      @ k
+                      @ m
+                      @ u
+                      Data.Foldable.$fFoldable[]
+                      w5
+                      w1
+                      w3
+                      w4
+                      w6)
+                   w6) -}
+d4e3dcd5b11caf830061db555fa50400
+  $wtoolAux ::
+    (GHC.Classes.Ord k, GHC.Classes.Eq u,
+     Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,
+     Math.Algebras.Structures.Algebra k (m u), GHC.Classes.Ord (m u),
+     GHC.Num.Num k) =>
+    [Math.Algebras.VectorSpace.Vect k (m u)]
+    -> [Math.Algebras.VectorSpace.Vect k (m u)] -> GHC.Types.Bool
+  {- Arity: 8,
+     Strictness: <L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),C(C1(U)))><L,U(C(U),C(U))><L,U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,1*U><S,1*U>,
+     Inline: [0] -}
+76b8b1ecf2b06a3521e11b178ce43423
+  tool ::
+    (GHC.Classes.Eq u, GHC.Show.Show (m u), GHC.Show.Show u,
+     Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,
+     Math.Algebras.Structures.Algebra k (m u), GHC.Classes.Ord (m u),
+     GHC.Classes.Ord k, GHC.Num.Num k) =>
+    [Math.Algebras.VectorSpace.Vect k (m u)] -> GHC.Types.Bool
+  {- Arity: 9,
+     Strictness: <L,U(C(C1(U)),C(C1(U)))><L,A><L,A><L,U(C(U),C(U))><L,U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (9, True, True)
+                (\ @ u
+                   @ (m :: * -> *)
+                   @ k
+                   (w :: GHC.Classes.Eq u)
+                   (w1 :: GHC.Show.Show (m u))
+                   (w2 :: GHC.Show.Show u)
+                   (w3 :: Math.CommutativeAlgebra.Polynomial.MonomialConstructor m)
+                   (w4 :: Math.Algebras.Structures.Algebra k (m u))
+                   (w5 :: GHC.Classes.Ord (m u))
+                   (w6 :: GHC.Classes.Ord k)
+                   (w7 :: GHC.Num.Num k)
+                   (w8 :: [Math.Algebras.VectorSpace.Vect k (m u)]) ->
+                 Tool.$wtool @ u @ m @ k w w3 w4 w5 w6 w7 w8) -}
+e35ce431a7adc7407c7626b947ca50f9
+  varsList ::
+    (Data.Foldable.Foldable t, GHC.Num.Num k,
+     Math.CommutativeAlgebra.Polynomial.MonomialConstructor m,
+     GHC.Classes.Ord (m v), GHC.Classes.Ord k) =>
+    t (Math.Algebras.VectorSpace.Vect k (m v))
+    -> [Math.Algebras.VectorSpace.Vect k (m v)]
+  {- Arity: 5,
+     Strictness: <L,U(A,A,C(C1(C1(U))),A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U(A,A,A,A,A,A,C(U))><L,U(C(U),C(U))><L,U(U(U,U),C(C1(U)),A,A,A,A,A,A)><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>,
+     Unfolding: (\ @ (t :: * -> *)
+                   @ k
+                   @ (m :: * -> *)
+                   @ v
+                   ($dFoldable :: Data.Foldable.Foldable t)
+                   ($dNum :: GHC.Num.Num k)
+                   ($dMonomialConstructor :: Math.CommutativeAlgebra.Polynomial.MonomialConstructor
+                                               m)
+                   ($dOrd :: GHC.Classes.Ord (m v))
+                   ($dOrd1 :: GHC.Classes.Ord k) ->
+                 let {
+                   lvl2 :: Math.Algebras.VectorSpace.Vect k (m v)
+                           -> [Math.Algebras.VectorSpace.Vect k (m v)]
+                   = Math.CommutativeAlgebra.Polynomial.vars
+                       @ k
+                       @ m
+                       @ v
+                       $dNum
+                       $dOrd1
+                       $dMonomialConstructor
+                       $dOrd
+                 } in
+                 let {
+                   $dEq :: GHC.Classes.Eq k = GHC.Classes.$p1Ord @ k $dOrd1
+                 } in
+                 let {
+                   $dEq1 :: GHC.Classes.Eq (m v) = GHC.Classes.$p1Ord @ (m v) $dOrd
+                 } in
+                 let {
+                   lvl3 :: GHC.Classes.Eq (m v, k)
+                   = GHC.Classes.$fEq(,) @ (m v) @ k $dEq1 $dEq
+                 } in
+                 let {
+                   lvl4 :: [(m v, k)] -> [(m v, k)] -> GHC.Types.Bool {- Arity: 2 -}
+                   = GHC.Classes.$fEq[]_$c== @ (m v, k) lvl3
+                 } in
+                 \ (xs :: t (Math.Algebras.VectorSpace.Vect k (m v))) ->
+                 Data.OldList.nubBy
+                   @ (Math.Algebras.VectorSpace.Vect k (m v))
+                   lvl4
+                     `cast`
+                   (Sym (Math.Algebras.VectorSpace.N:Vect[0] <k>_R <m v>_R)
+                    ->_R Sym (Math.Algebras.VectorSpace.N:Vect[0] <k>_R <m v>_R)
+                    ->_R <GHC.Types.Bool>_R)
+                   (Data.Foldable.concatMap
+                      @ t
+                      @ (Math.Algebras.VectorSpace.Vect k (m v))
+                      @ (Math.Algebras.VectorSpace.Vect k (m v))
+                      $dFoldable
+                      lvl2
+                      xs)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

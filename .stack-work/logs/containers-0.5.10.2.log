@@ -1,179 +1,39 @@
 Configuring containers-0.5.10.2...
 Building containers-0.5.10.2...
 Preprocessing library containers-0.5.10.2...
-[ 1 of 33] Compiling Utils.Containers.Internal.StrictPair ( Utils/Containers/Internal/StrictPair.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Utils/Containers/Internal/StrictPair.o )
-[ 2 of 33] Compiling Utils.Containers.Internal.StrictMaybe ( Utils/Containers/Internal/StrictMaybe.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Utils/Containers/Internal/StrictMaybe.o )
-[ 3 of 33] Compiling Utils.Containers.Internal.StrictFold ( Utils/Containers/Internal/StrictFold.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Utils/Containers/Internal/StrictFold.o )
-[ 4 of 33] Compiling Utils.Containers.Internal.PtrEquality ( Utils/Containers/Internal/PtrEquality.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Utils/Containers/Internal/PtrEquality.o )
-[ 5 of 33] Compiling Utils.Containers.Internal.BitUtil ( Utils/Containers/Internal/BitUtil.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Utils/Containers/Internal/BitUtil.o )
-[ 6 of 33] Compiling Utils.Containers.Internal.BitQueue ( Utils/Containers/Internal/BitQueue.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Utils/Containers/Internal/BitQueue.o )
-[ 7 of 33] Compiling Data.Set.Internal ( Data/Set/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Set/Internal.o )
-[ 8 of 33] Compiling Data.Set         ( Data/Set.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Set.o )
-[ 9 of 33] Compiling Data.Sequence.Internal ( Data/Sequence/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Sequence/Internal.o )
-[10 of 33] Compiling Data.Sequence    ( Data/Sequence.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Sequence.o )
-[11 of 33] Compiling Data.Tree        ( Data/Tree.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Tree.o )
-[12 of 33] Compiling Data.Map.Internal ( Data/Map/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Internal.o )
-[13 of 33] Compiling Data.Map.Internal.Debug ( Data/Map/Internal/Debug.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Internal/Debug.o )
-[14 of 33] Compiling Data.Map.Internal.DeprecatedShowTree ( Data/Map/Internal/DeprecatedShowTree.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Internal/DeprecatedShowTree.o )
-[15 of 33] Compiling Data.Map.Lazy    ( Data/Map/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Lazy.o )
-[16 of 33] Compiling Data.Map.Merge.Lazy ( Data/Map/Merge/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Merge/Lazy.o )
-[17 of 33] Compiling Data.Map.Lazy.Merge ( Data/Map/Lazy/Merge.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Lazy/Merge.o )
-[18 of 33] Compiling Data.Map.Strict.Internal ( Data/Map/Strict/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Strict/Internal.o )
-[19 of 33] Compiling Data.Map.Merge.Strict ( Data/Map/Merge/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Merge/Strict.o )
-[20 of 33] Compiling Data.Map.Strict.Merge ( Data/Map/Strict/Merge.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Strict/Merge.o )
-[21 of 33] Compiling Data.Map.Strict  ( Data/Map/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map/Strict.o )
-[22 of 33] Compiling Data.Map         ( Data/Map.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Map.o )
-[23 of 33] Compiling Data.IntSet.Internal ( Data/IntSet/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntSet/Internal.o )
-[24 of 33] Compiling Data.IntSet      ( Data/IntSet.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntSet.o )
-[25 of 33] Compiling Data.IntMap.Internal ( Data/IntMap/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap/Internal.o )
-[26 of 33] Compiling Data.IntMap.Internal.Debug ( Data/IntMap/Internal/Debug.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap/Internal/Debug.o )
-[27 of 33] Compiling Data.IntMap.Internal.DeprecatedDebug ( Data/IntMap/Internal/DeprecatedDebug.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap/Internal/DeprecatedDebug.o )
-[28 of 33] Compiling Data.IntMap.Lazy ( Data/IntMap/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap/Lazy.o )
-[29 of 33] Compiling Data.IntMap.Merge.Lazy ( Data/IntMap/Merge/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap/Merge/Lazy.o )
-[30 of 33] Compiling Data.IntMap.Merge.Strict ( Data/IntMap/Merge/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap/Merge/Strict.o )
-[31 of 33] Compiling Data.IntMap.Strict ( Data/IntMap/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap/Strict.o )
-[32 of 33] Compiling Data.IntMap      ( Data/IntMap.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/IntMap.o )
-[33 of 33] Compiling Data.Graph       ( Data/Graph.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Graph.o )
-Running Haddock for containers-0.5.10.2...
-Preprocessing library containers-0.5.10.2...
-Haddock coverage:
- 100% (  3 /  3) in 'Utils.Containers.Internal.StrictPair'
-  20% (  1 /  5) in 'Utils.Containers.Internal.StrictMaybe'
-  Missing documentation for:
-    MaybeS (Utils/Containers/Internal/StrictMaybe.hs:15)
-    maybeS (Utils/Containers/Internal/StrictMaybe.hs:21)
-    toMaybe (Utils/Containers/Internal/StrictMaybe.hs:25)
-    toMaybeS (Utils/Containers/Internal/StrictMaybe.hs:29)
-  50% (  1 /  2) in 'Utils.Containers.Internal.StrictFold'
-  Missing documentation for:
-    Module header
- 100% (  3 /  3) in 'Utils.Containers.Internal.PtrEquality'
-  40% (  2 /  5) in 'Utils.Containers.Internal.BitUtil'
-  Missing documentation for:
-    shiftLL (Utils/Containers/Internal/BitUtil.hs:75)
-    shiftRL (Utils/Containers/Internal/BitUtil.hs:75)
-    wordSize (Utils/Containers/Internal/BitUtil.hs:92)
-  75% (  6 /  8) in 'Utils.Containers.Internal.BitQueue'
-  Missing documentation for:
-    BitQueue (Utils/Containers/Internal/BitQueue.hs:80)
-    BitQueueB (Utils/Containers/Internal/BitQueue.hs:77)
-  95% ( 81 / 85) in 'Data.Set.Internal'
-  Missing documentation for:
-    bin (Data/Set/Internal.hs:1596)
-    balanced (Data/Set/Internal.hs:1743)
-    link (Data/Set/Internal.hs:1379)
-    merge (Data/Set/Internal.hs:1405)
- 100% ( 83 / 83) in 'Data.Set'
-  93% ( 94 /101) in 'Data.Sequence.Internal'
-  Missing documentation for:
-    Elem (Data/Sequence/Internal.hs:1085)
-    FingerTree (Data/Sequence/Internal.hs:848)
-    Node (Data/Sequence/Internal.hs:1028)
-    Digit (Data/Sequence/Internal.hs:939)
-    Sized (Data/Sequence/Internal.hs:313)
-    MaybeForce (Data/Sequence/Internal.hs:321)
-    liftA2Seq (Data/Sequence/Internal.hs:505)
- 100% ( 94 / 94) in 'Data.Sequence'
-  94% ( 16 / 17) in 'Data.Tree'
-  Missing documentation for:
-    Forest (Data/Tree.hs:97)
-  93% (180 /194) in 'Data.Map.Internal'
-  Missing documentation for:
-    findMax (Data/Map/Internal.hs:1639)
-    AreWeStrict (Data/Map/Internal.hs:1151)
-    atKeyImpl (Data/Map/Internal.hs:1220)
-    atKeyPlain (Data/Map/Internal.hs:1348)
-    bin (Data/Map/Internal.hs:3957)
-    balance (Data/Map/Internal.hs:3866)
-    balanceL (Data/Map/Internal.hs:3905)
-    balanceR (Data/Map/Internal.hs:3930)
-    delta (Data/Map/Internal.hs:3831)
-    insertMax (Data/Map/Internal.hs:3724)
-    link (Data/Map/Internal.hs:3714)
-    link2 (Data/Map/Internal.hs:3740)
-    glue (Data/Map/Internal.hs:3752)
-    MaybeS (Utils/Containers/Internal/StrictMaybe.hs:15)
-  43% (  6 / 14) in 'Data.Map.Internal.Debug'
-  Missing documentation for:
-    Module header
-    showsTree (Data/Map/Internal/Debug.hs:59)
-    showsTreeHang (Data/Map/Internal/Debug.hs:72)
-    showWide (Data/Map/Internal/Debug.hs:85)
-    showsBars (Data/Map/Internal/Debug.hs:90)
-    node (Data/Map/Internal/Debug.hs:96)
-    withBar (Data/Map/Internal/Debug.hs:99)
-    withEmpty (Data/Map/Internal/Debug.hs:99)
- 100% (  3 /  3) in 'Data.Map.Internal.DeprecatedShowTree'
-  99% (152 /153) in 'Data.Map.Lazy'
-  Missing documentation for:
-    findMax (Data/Map/Internal.hs:1639)
- 100% ( 39 / 39) in 'Data.Map.Merge.Lazy'
- 100% (  2 /  2) in 'Data.Map.Lazy.Merge'
-  99% (181 /182) in 'Data.Map.Strict.Internal'
-  Missing documentation for:
-    findMax (Data/Map/Internal.hs:1639)
- 100% ( 35 / 35) in 'Data.Map.Merge.Strict'
- 100% (  2 /  2) in 'Data.Map.Strict.Merge'
-  99% (152 /153) in 'Data.Map.Strict'
-  Missing documentation for:
-    findMax (Data/Map/Internal.hs:1639)
- 100% (  7 /  7) in 'Data.Map'
-  93% ( 65 / 70) in 'Data.IntSet.Internal'
-  Missing documentation for:
-    Key (Data/IntSet/Internal.hs:263)
-    match (Data/IntSet/Internal.hs:1253)
-    suffixBitMask (Data/IntSet/Internal.hs:1216)
-    prefixBitMask (Data/IntSet/Internal.hs:1224)
-    bitmapOf (Data/IntSet/Internal.hs:1240)
-  99% ( 66 / 67) in 'Data.IntSet'
-  Missing documentation for:
-    Key (Data/IntSet/Internal.hs:263)
-  94% (174 /185) in 'Data.IntMap.Internal'
-  Missing documentation for:
-    Key (Data/IntSet/Internal.hs:263)
-    mergeWithKey' (Data/IntMap/Internal.hs:1273)
-    Mask (Data/IntMap/Internal.hs:355)
-    Prefix (Data/IntMap/Internal.hs:354)
-    Nat (Data/IntMap/Internal.hs:329)
-    natFromInt (Data/IntMap/Internal.hs:331)
-    intFromNat (Data/IntMap/Internal.hs:335)
-    link (Data/IntMap/Internal.hs:3121)
-    bin (Data/IntMap/Internal.hs:3133)
-    binCheckLeft (Data/IntMap/Internal.hs:3140)
-    binCheckRight (Data/IntMap/Internal.hs:3146)
-  67% (  2 /  3) in 'Data.IntMap.Internal.Debug'
-  Missing documentation for:
-    Module header
-  67% (  2 /  3) in 'Data.IntMap.Internal.DeprecatedDebug'
-  Missing documentation for:
-    Module header
-  99% (130 /131) in 'Data.IntMap.Lazy'
-  Missing documentation for:
-    Key (Data/IntSet/Internal.hs:263)
- 100% ( 39 / 39) in 'Data.IntMap.Merge.Lazy'
- 100% ( 35 / 35) in 'Data.IntMap.Merge.Strict'
-  99% (130 /131) in 'Data.IntMap.Strict'
-  Missing documentation for:
-    Key (Data/IntSet/Internal.hs:263)
- 100% (  6 /  6) in 'Data.IntMap'
- 100% ( 33 / 33) in 'Data.Graph'
-Warning: Data.Set.Internal: could not find link destinations for:
-    Size
-Warning: Data.Sequence.Internal: could not find link destinations for:
-    maybeRwhnf PQueue Rigid aptyMiddle mapMulFT rigidify applicativeTree cycleNTimes unrollPQ toPQ mergePQ
-Warning: Data.Map.Internal: could not find link destinations for:
-    Size unsafeIndex unsafeRangeSize mapAccumL
-Warning: Data.Map.Strict.Internal: could not find link destinations for:
-    Size mapAccumL
-Warning: Data.IntSet.Internal: could not find link destinations for:
-    Prefix Mask BitMap
-Warning: Data.IntMap.Internal: could not find link destinations for:
-    mapAccumL
-Warning: Data.IntMap.Strict: could not find link destinations for:
-    mapAccumL
-Documentation created:
-.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/containers/index.html,
-.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/doc/html/containers/containers.txt
+[ 1 of 33] Compiling Utils.Containers.Internal.StrictPair ( Utils/Containers/Internal/StrictPair.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Utils/Containers/Internal/StrictPair.o )
+[ 2 of 33] Compiling Utils.Containers.Internal.StrictMaybe ( Utils/Containers/Internal/StrictMaybe.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Utils/Containers/Internal/StrictMaybe.o )
+[ 3 of 33] Compiling Utils.Containers.Internal.StrictFold ( Utils/Containers/Internal/StrictFold.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Utils/Containers/Internal/StrictFold.o )
+[ 4 of 33] Compiling Utils.Containers.Internal.PtrEquality ( Utils/Containers/Internal/PtrEquality.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Utils/Containers/Internal/PtrEquality.o )
+[ 5 of 33] Compiling Utils.Containers.Internal.BitUtil ( Utils/Containers/Internal/BitUtil.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Utils/Containers/Internal/BitUtil.o )
+[ 6 of 33] Compiling Utils.Containers.Internal.BitQueue ( Utils/Containers/Internal/BitQueue.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Utils/Containers/Internal/BitQueue.o )
+[ 7 of 33] Compiling Data.Set.Internal ( Data/Set/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Set/Internal.o )
+[ 8 of 33] Compiling Data.Set         ( Data/Set.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Set.o )
+[ 9 of 33] Compiling Data.Sequence.Internal ( Data/Sequence/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Sequence/Internal.o )
+[10 of 33] Compiling Data.Sequence    ( Data/Sequence.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Sequence.o )
+[11 of 33] Compiling Data.Tree        ( Data/Tree.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Tree.o )
+[12 of 33] Compiling Data.Map.Internal ( Data/Map/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Internal.o )
+[13 of 33] Compiling Data.Map.Internal.Debug ( Data/Map/Internal/Debug.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Internal/Debug.o )
+[14 of 33] Compiling Data.Map.Internal.DeprecatedShowTree ( Data/Map/Internal/DeprecatedShowTree.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Internal/DeprecatedShowTree.o )
+[15 of 33] Compiling Data.Map.Lazy    ( Data/Map/Lazy.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Lazy.o )
+[16 of 33] Compiling Data.Map.Merge.Lazy ( Data/Map/Merge/Lazy.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Merge/Lazy.o )
+[17 of 33] Compiling Data.Map.Lazy.Merge ( Data/Map/Lazy/Merge.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Lazy/Merge.o )
+[18 of 33] Compiling Data.Map.Strict.Internal ( Data/Map/Strict/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Strict/Internal.o )
+[19 of 33] Compiling Data.Map.Merge.Strict ( Data/Map/Merge/Strict.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Merge/Strict.o )
+[20 of 33] Compiling Data.Map.Strict.Merge ( Data/Map/Strict/Merge.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Strict/Merge.o )
+[21 of 33] Compiling Data.Map.Strict  ( Data/Map/Strict.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map/Strict.o )
+[22 of 33] Compiling Data.Map         ( Data/Map.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Map.o )
+[23 of 33] Compiling Data.IntSet.Internal ( Data/IntSet/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntSet/Internal.o )
+[24 of 33] Compiling Data.IntSet      ( Data/IntSet.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntSet.o )
+[25 of 33] Compiling Data.IntMap.Internal ( Data/IntMap/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntMap/Internal.o )
+[26 of 33] Compiling Data.IntMap.Internal.Debug ( Data/IntMap/Internal/Debug.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntMap/Internal/Debug.o )
+[27 of 33] Compiling Data.IntMap.Internal.DeprecatedDebug ( Data/IntMap/Internal/DeprecatedDebug.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntMap/Internal/DeprecatedDebug.o )
+[28 of 33] Compiling Data.IntMap.Lazy ( Data/IntMap/Lazy.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntMap/Lazy.o )
+[29 of 33] Compiling Data.IntMap.Merge.Lazy ( Data/IntMap/Merge/Lazy.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntMap/Merge/Lazy.o )
+[30 of 33] Compiling Data.IntMap.Merge.Strict ( Data/IntMap/Merge/Strict.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntMap/Merge/Strict.o )
+[31 of 33] Compiling Data.IntMap.Strict ( Data/IntMap/Strict.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntMap/Strict.o )
+[32 of 33] Compiling Data.IntMap      ( Data/IntMap.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/IntMap.o )
+[33 of 33] Compiling Data.Graph       ( Data/Graph.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Data/Graph.o )
 Installing library in
-/Users/danielrodriguezchavarria/SAT-Pol/.stack-work/install/x86_64-osx/lts-8.22/8.0.2/lib/x86_64-osx-ghc-8.0.2/containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz
+/home/jalonso/Dropbox/alonso/estudio/SAT-Pol/.stack-work/install/x86_64-linux/lts-8.22/8.0.2/lib/x86_64-linux-ghc-8.0.2/containers-0.5.10.2-BsNvjXoQS1iGZ9xbXaQ0Mz
 Registering containers-0.5.10.2...
