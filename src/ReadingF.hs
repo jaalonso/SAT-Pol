@@ -21,23 +21,35 @@ import ToolS (toolS, toolSP')
 
 import qualified Data.Set as S
 
--------------------------------------------------------------------------------
-
+main1 :: FilePath -> IO ()
 main1 f = do
   s <- readFile f
-  print $ nub $ (foldr (\x acc -> (((clean . varFold . words) x):acc)) []) $ lines $ s
-
--------------------------------------------------------------------------------
+  print
+    $ nub
+    $ foldr (\x acc -> (((clean . varFold . words) x):acc)) []
+    $ lines
+    $ s
 
 -- main2 "/Users/danielrodriguezchavarria/Desktop/300/ReadingFiles/fil3.txt"
 
+main2 :: FilePath -> IO ()
 main2 f = do
   s <- readFile f
-  print $ tool $ nub $ (foldr (\x acc -> (((clean . varFold . words) x):acc)) []) $ lines $ s 
+  print
+    $ tool
+    $ nub
+    $ foldr (\x acc -> (((clean . varFold . words) x):acc)) []
+    $ lines
+    $ s 
 
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
+cleanP :: ( Eq k
+          , Num k
+          , Ord (m u)
+          , Show (m u)
+          , Show u
+          , Algebra k (m u)
+          , MonomialConstructor m) =>
+          (Vect k (m u), t) -> (Vect k (m u), t)
 cleanP (a,b) = (clean a,b)
 
 insertP (a,b) (acc,vs) = (S.insert a acc, S.union vs b)

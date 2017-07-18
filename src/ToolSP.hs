@@ -42,9 +42,10 @@ import qualified Data.Set as S
 
 -- | varsSet returns the set of variables which occurs in a polynomial. For
 -- example:
--- λ> varsSet (x2*x3+x1)
+-- 
+-- >>> varsSet (x2*x3+x1)
 -- fromList [x1,x2,x3]
--- λ> varsSet (x1)
+-- >>> varsSet (x1)
 -- fromList [x1]
 
 varsSet :: (Ord (m v)
@@ -69,6 +70,7 @@ varsList = foldr (\vs acc -> S.union acc (varsSet vs)) S.empty
 -- | The function (deltaRule p x y) performs the independence rule described in
 -- the paper [?]. It's important to note that p is the variable from wich we
 -- derive and the one we would drop. For example:
+-- 
 -- >>> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (1:: LexPoly F2 String)
 -- 1
 -- >>> deltaRule (x1:: LexPoly F2 String) (1:: LexPoly F2 String) (0:: LexPoly F2 String)
@@ -94,12 +96,11 @@ deltaRule p (a1,v1) (a2,v2) = (a,v)
 
 -- | deltaRule1Step apply deltaRule from p between every polynomial in the
 -- first list and store the results in the accumulator (second list). For
--- exaple: 
--- λ> deltaRuleList1Step (x1:: LexPoly F2 String) ([x1]:: [LexPoly F2 String])
---       ([1]::[LexPoly F2 String]) 
+-- example:
+-- 
+-- >>> deltaRuleList1Step (x1:: LexPoly F2 String) ([x1]:: [LexPoly F2 String]) ([1]::[LexPoly F2 String]) 
 -- [1,1]
--- λ> deltaRuleList1Step (x1:: LexPoly F2 String) ([x1,x1*x2,x1*x3]:: [LexPoly
---       F2 String]) ([]::[LexPoly F2 String]) 
+-- >>> deltaRuleList1Step (x1:: LexPoly F2 String) ([x1,x1*x2,x1*x3]:: [LexPoly F2 String]) ([]::[LexPoly F2 String]) 
 -- [x3,x2x3,x2,x3,x2,1]
 
 deltaRule1Step ::

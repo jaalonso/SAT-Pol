@@ -35,3 +35,17 @@ library
     , containers
     , hatt
   default-language: Haskell2010
+
+test-suite doctests
+  type: exitcode-stdio-1.0
+  main-is: Doctest.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded
+  build-depends:
+      base >=4.7 && <5
+    , HaskellForMaths
+    , containers
+    , hatt
+    , doctest-discover
+  default-language: Haskell2010

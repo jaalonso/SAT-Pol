@@ -22,3 +22,10 @@ library:
   - ReadingF
   - ToolS
   - ToolSP
+tests:
+  doctests:
+    main: Doctest.hs
+    source-dirs: test
+    ghc-options: -threaded
+    dependencies:
+    - doctest-discover
