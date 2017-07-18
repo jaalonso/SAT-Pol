@@ -8,10 +8,10 @@ window.onload = function () {pageLoad();setSynopsis("mini_Tool.html");};
  were satisfiables. The function input is a list of polynomials because the
  transformation from formula to polynomial is handled by ReadingF.hs module.</p></div></div><div class="top"><p class="src"><a id="v:varsList" class="def">varsList</a> :: (<a href="../base-4.9.1.0/Data-Foldable.html#t:Foldable">Foldable</a> t, <a href="../base-4.9.1.0/Prelude.html#t:Num">Num</a> k, MonomialConstructor m, <a href="../base-4.9.1.0/Data-Ord.html#t:Ord">Ord</a> (m v), <a href="../base-4.9.1.0/Data-Ord.html#t:Ord">Ord</a> k) =&gt; t (Vect k (m v)) -&gt; [Vect k (m v)] <a href="src/Tool.html#varsList" class="link">Source</a> <a href="#v:varsList" class="selflink">#</a></p><div class="doc"><p>varsList xs return the set of variables which occurs in any polynomial of
  the list xs. For example, the trivial case:
- &#955;&gt; let xs = (take 10 (map (var . (n -&gt; <code>x</code>:n) . show) [1..])) :: [LexPoly F2 String]
- &#955;&gt; xs
+ &gt;&gt;&gt; let xs = (take 10 (map (var . (n -&gt; <code>x</code>:n) . show) [1..])) :: [LexPoly F2 String]
+ &gt;&gt;&gt; xs
  [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]
- &#955;&gt; varsList xs
+ &gt;&gt;&gt; varsList xs
  [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]
- &#955;&gt; varsList [x1*x2+x2,x1+x1*x3,x1*x4*x2]
+ &gt;&gt;&gt; varsList [x1*x2+x2,x1+x1*x3,x1*x4*x2]
  [x1,x2,x3,x4]</p></div></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.17.3</p></div></body></html>

@@ -24,21 +24,43 @@ module PolAux
 --   identical polynomial without exponents greater than 1.
 --   
 --   In the library HaskellForMaths exists a function that performs the
---   same (%%) so we can check the results. For example: λ&gt; clean
---   (x1^3:: LexPoly F2 String) x1 λ&gt; (x1^3:: LexPoly F2 String) %%
---   [x1^2+x1] x1 λ&gt; clean (x1^3*x2^6+x3^2*x4+x1+1 :: LexPoly F2 String)
---   x1x2+x1+x3x4+1 λ&gt; (x1^3*x2^6+x3^2*x4+x1+1 :: LexPoly F2 String) %%
---   [x1^2+x1,x2^2+x2,x3^2+x3,x4^2+x4] x1x2+x1+x3x4+1
+--   same (%%) so we can check the results. For example,
+--   
+--   <pre>
+--   &gt;&gt;&gt; clean (x1^3:: LexPoly F2 String)
+--   x1
+--   
+--   &gt;&gt;&gt; (x1^3:: LexPoly F2 String) %% [x1^2+x1]
+--   x1
+--   
+--   &gt;&gt;&gt; clean (x1^3*x2^6+x3^2*x4+x1+1 :: LexPoly F2 String)
+--   x1x2+x1+x3x4+1
+--   
+--   &gt;&gt;&gt; let pol = x1^3*x2^6+x3^2*x4+x1+1 :: LexPoly F2 String
+--   
+--   &gt;&gt;&gt; let list = [x1^2+x1,x2^2+x2,x3^2+x3,x4^2+x4]
+--   
+--   &gt;&gt;&gt; pol %% list
+--   x1x2+x1+x3x4+1
+--   </pre>
 clean :: (Eq k, Num k, Eq (m u), Show u, Ord (m u), Show (m u), Algebra k (m u), MonomialConstructor m) => Vect k (m u) -> Vect k (m u)
 
 -- | deriv calculates the derivative of the polynomial f with respect to
 --   the variable v. It's important to note that we use the fact that we
 --   are in the quotient group described above. For example:
 --   
---   λ&gt; deriv (x1:: LexPoly F2 String) (x1:: LexPoly F2 String) 1 λ&gt;
---   deriv (1+x1+x2+x1*x2:: LexPoly F2 String) (x1:: LexPoly F2 String)
---   x2+1 λ&gt; deriv (x1*x2+x1+x3*x4+1:: LexPoly F2 String) (x1:: LexPoly
---   F2 String) x2+1
+--   <pre>
+--   &gt;&gt;&gt; let v = x1:: LexPoly F2 String
+--   
+--   &gt;&gt;&gt; deriv v v
+--   1
+--   
+--   &gt;&gt;&gt; deriv (1+x1+x2+x1*x2:: LexPoly F2 String) v
+--   x2+1
+--   
+--   &gt;&gt;&gt; deriv (x1*x2+x1+x3*x4+1:: LexPoly F2 String) v
+--   x2+1
+--   </pre>
 deriv :: (Eq k, Eq u, Num k, Ord (m u), Show (m u), Algebra k (m u), MonomialConstructor m) => Vect k (m u) -> Vect k (m u) -> Vect k (m u)
 
 
@@ -55,11 +77,11 @@ module Tool
 tool :: (Eq u, Show (m u), Show u, MonomialConstructor m, Algebra k (m u), Ord (m u), Ord k, Num k) => [Vect k (m u)] -> Bool
 
 -- | varsList xs return the set of variables which occurs in any polynomial
---   of the list xs. For example, the trivial case: λ&gt; let xs = (take 10
---   (map (var . (n -&gt; <tt>x</tt>:n) . show) [1..])) :: [LexPoly F2
---   String] λ&gt; xs [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10] λ&gt; varsList xs
---   [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10] λ&gt; varsList
---   [x1*x2+x2,x1+x1*x3,x1*x4*x2] [x1,x2,x3,x4]
+--   of the list xs. For example, the trivial case: &gt;&gt;&gt; let xs =
+--   (take 10 (map (var . (n -&gt; <tt>x</tt>:n) . show) [1..])) ::
+--   [LexPoly F2 String] &gt;&gt;&gt; xs [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]
+--   &gt;&gt;&gt; varsList xs [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10] &gt;&gt;&gt;
+--   varsList [x1*x2+x2,x1+x1*x3,x1*x4*x2] [x1,x2,x3,x4]
 varsList :: (Foldable t, Num k, MonomialConstructor m, Ord (m v), Ord k) => t (Vect k (m v)) -> [Vect k (m v)]
 
 
@@ -79,7 +101,7 @@ toolSP' :: (Eq u, Show (m u), Show u, MonomialConstructor m, Algebra k (m u), Or
 module ReadingF
 main1 :: FilePath -> IO ()
 main2 :: FilePath -> IO ()
-cleanP :: (MonomialConstructor m, Algebra k (m u), Show (m u), Show u, Ord (m u), Eq k, Num k) => (Vect k (m u), t) -> (Vect k (m u), t)
+cleanP :: (Eq k, Num k, Ord (m u), Show (m u), Show u, Algebra k (m u), MonomialConstructor m) => (Vect k (m u), t) -> (Vect k (m u), t)
 insertP :: (Ord a, Ord a1) => (a1, Set a) -> (Set a1, Set a) -> (Set a1, Set a)
 main3 :: FilePath -> IO ()
 main3P :: FilePath -> IO ()
