@@ -3,9 +3,8 @@
 -- the researchers from the department of Computer Science and Artificial
 -- Intelligence at the University of Seville.
 
-module ToolS
-    ( toolS
-    , toolSP'
+module ToolSP
+    ( toolSP,      
     ) where
 
 import Data.List(nub,iterate,partition, foldl', union)
@@ -77,30 +76,19 @@ varsList = foldr (\vs acc -> S.union acc (varsSet vs)) S.empty
 -- >>> deltaRule (x1:: LexPoly F2 String) (x1:: LexPoly F2 String) (x1:: LexPoly F2 String)
 -- 1
 
-deltaRule' :: (Eq k, Eq u, Num k, Ord (m u), Algebra k (m u),
+deltaRule :: (Eq k, Eq u, Ord k, Num k, Ord (m u), Algebra k (m u),
               MonomialConstructor m, Show (m u), Show u) =>
-             Vect k (m u) -> Vect k (m u) -> Vect k (m u) -> Vect k (m u)
-deltaRule' p a1 a2 = clean (1 + (1+a1*a2)*(1+a1*da2 + a2*da1 + da1*da2))
+              Vect k (m u) ->
+              (Vect k (m u),S.Set (Vect k (m u))) ->
+              (Vect k (m u),S.Set (Vect k (m u))) ->
+              (Vect k (m u),S.Set (Vect k (m u)))
+deltaRule p (a1,v1) (a2,v2) = (a,v)
   where da1 = deriv a1 p
         da2 = deriv a2 p
-
-deltaRule :: (Eq k, Eq u, Num k, Ord (m u), Algebra k (m u),
-              MonomialConstructor m, Show (m u), Show u) =>
-             Vect k (m u) -> Vect k (m u) -> Vect k (m u) -> Vect k (m u)
-deltaRule p a1 a2 = clean (aux + a1a2 + aux2)
-  --clean (a1da2 + a2da1 + da1da2 + a1a2 + a1a2a1da2 + a1a2a2da1 + a1a2da1da2)
-  where da1        = deriv a1 p
-        da2        = deriv a2 p
-        a1a2       = clean (a1*a2)
-        a1da2      = clean a1*da2
-        a2da1      = clean a2*da1
-        da1da2     = clean da1*da2
-        aux        = a1da2 + a2da1 + da1da2
-        aux2       = clean (a1a2*aux)
-        --a1a2a1da2  = clean (a2*a1da2)
-        --a1a2a2da1  = clean (a1*a2da1)
-        --a1a2da1da2 = clean (a1a2*da1da2)
-        
+        a   = clean (1 + (1+a1*a2)*(1+a1*da2 + a2*da1 + da1*da2))
+        v1' = S.delete p v1
+        v2' = S.delete p v2
+        v   = S.union v1' v2' 
 
 -------------------------------------------------------------------------------
 
@@ -122,14 +110,15 @@ deltaRule1Step ::
   , Algebra k (m u)
   , MonomialConstructor m
   , Show (m u), Show u) =>
-  Vect k (m u) -> S.Set (Vect k (m u)) -> S.Set (Vect k (m u)) -> S.Set (Vect k (m u))
+  Vect k (m u) -> S.Set (Vect k (m u),S.Set (Vect k (m u))) ->
+  S.Set (Vect k (m u),S.Set (Vect k (m u))) ->
+  S.Set (Vect k (m u),S.Set (Vect k (m u))) 
 deltaRule1Step v pps acum | S.null pps = acum
                           | otherwise  = deltaRule1Step v ps miniStep
   where (p,ps)   = S.deleteFindMin pps -- A pair form by the minimal element of
                                        -- a set and the original set without
                                        -- it. 
-        miniStep = S.foldr (\p' acc -> S.insert (deltaRule v p p') acc) acum pps 
-        
+        miniStep = S.foldl (\acc p' -> S.insert (deltaRule v p p') acc) acum pps  
 
 -------------------------------------------------------------------------------
                                    
@@ -137,7 +126,7 @@ deltaRule1Step v pps acum | S.null pps = acum
 -- case, the original set of formulas was unsatisfiable and the tool answer
 -- would be "False". Otherwise, the set of polynomials is divided in two subsets,
 -- one contains those polynomials in which occurs the variable p, while the
--- other stores the rest.
+-- other store the rest.
 
 -- We should think if there exists any way to use the lazy power in the search
 -- of zeros.
@@ -153,38 +142,22 @@ toolAux :: (Eq k
            , Ord (m u)
            , Monomial (m u)
            , Num k) =>
-           S.Set (Vect k (m u)) -> S.Set (Vect k (m u)) -> Bool
-toolAux vvs ps | S.null vvs        = S.notMember 0 ps
-               | S.member 0 ps  = False
-               | otherwise      = toolAux vs ps'
+           S.Set (Vect k (m u)) -> S.Set (Vect k (m u),S.Set (Vect k (m u))) -> Bool
+toolAux vvs ps | S.null vvs                = S.notMember (0,S.empty) ps
+               | S.member (0,S.empty) ps   = False
+               | otherwise                 = toolAux vs ps'
           where (v,vs)    = S.deleteFindMin vvs
-                --(ps1,ps2) = S.partition (\p -> aux (vars p)) ps -- time leak?
-                (ps1,ps2) = S.partition (\p -> mdivides (lm v) (lm p)) ps
+                --(ps1,ps2) = S.partition (\p -> S.member v (snd p)) ps
+                (ps1,ps2) = S.partition (\p -> mdivides (lm v) ((lm . fst) p)) ps
                 ps'       = deltaRule1Step v ps1 ps2
-                --aux x   | null x    = False
-                --        | otherwise = v == head x
+
 -------------------------------------------------------------------------------
 
 -- |tool decides if the set of formulas that produced the set of polynomials
 -- were satisfiables. The function input is a list of polynomials because the
 -- transformation from formula to polynomial is handled by ReadingF.hs module.
 
-toolS :: (Eq u
-         , Show (m u)
-         , Show u
-         , MonomialConstructor m
-         , Algebra k (m u)
-         , Ord (m u)
-         , Monomial (m u)
-         , Ord k
-         , Num k) =>
-         S.Set (Vect k (m u)) -> Bool
-toolS xs = toolAux (varsList xs) xs
-
--------------------------------------------------------------------------------
-
-
-toolSP' :: (Eq u
+toolSP :: (Eq u
           , Show (m u)
           , Show u
           , MonomialConstructor m
@@ -193,7 +166,10 @@ toolSP' :: (Eq u
           , Monomial (m u)
           , Ord k
           , Num k) =>
-          (S.Set (Vect k (m u)), S.Set (Vect k (m u))) -> Bool
-toolSP' (xs,vs) = toolAux vs xs
+          (S.Set (Vect k (m u),S.Set (Vect k (m u))), S.Set (Vect k (m u))) -> Bool
+toolSP (xs,vs) = toolAux vs xs
 
 -------------------------------------------------------------------------------
+
+
+

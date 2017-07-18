@@ -4,7 +4,8 @@
 -- Intelligence at the University of Seville.
 
 module Tool
-    ( tool,      
+    ( tool
+      , varsList
     ) where
 
 import Data.List(nub,iterate,partition, foldl', union)

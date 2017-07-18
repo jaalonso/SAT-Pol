@@ -15,8 +15,9 @@ import Math.Algebras.TensorProduct
 import Math.Core.Utils (toSet)
 
 import PolAux
-import Tool (tool)
-import ToolS (toolS)
+import Tool (tool,varsList)
+import ToolS (toolS, toolSP')
+--import ToolSP (toolSP)
 
 import qualified Data.Set as S
 
@@ -37,18 +38,28 @@ main2 f = do
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
+cleanP (a,b) = (clean a,b)
+
+insertP (a,b) (acc,vs) = (S.insert a acc, S.union vs b)
 
 main3 f = do
   s <- readFile f
   print $ (foldr (\x acc -> (S.insert ((clean . varFold . words) x) acc)) S.empty) $ lines $ s
 
+main3P f = do
+  s <- readFile f
+  print $ (foldr (\x acc -> (insertP ((cleanP . varFoldP . words) x) acc)) (S.empty,S.empty)) $ lines $ s
 -------------------------------------------------------------------------------
 
 -- main2 "/Users/danielrodriguezchavarria/Desktop/300/ReadingFiles/fil3.txt"
 
 main4 f = do
   s <- readFile f
-  print $ toolS $ (foldr (\x acc -> (S.insert ((clean . varFold . words) x) acc)) S.empty) $ lines $ s 
+  print $ toolS $ (foldr (\x acc -> (S.insert ((clean . varFold . words) x) acc)) S.empty) $ lines $ s
+
+main4P f = do
+  s <- readFile f
+  print $ toolSP' $ (foldr (\x acc -> (insertP ((cleanP . varFoldP . words) x) acc)) (S.empty,S.empty)) $ lines $ s
 
 -------------------------------------------------------------------------------
   
@@ -68,15 +79,29 @@ varFold :: [String] -> Vect F2 (Lex String)
 varFold (x:xs) | x == "c" || x == "p" = 1
 varFold xs = foldl' (\acc x -> disj (var' x) acc) zerov xs
 
+varFoldP :: [String] -> (Vect F2 (Lex String), S.Set (Vect F2 (Lex String)))
+varFoldP (x:xs) | x == "c" || x == "p" = (1, S.empty)
+varFoldP xs = foldl' (\acc x -> disjP (var'P x) acc) (zerov,S.empty) xs
+
 -------------------------------------------------------------------------------
 
 var' "0"      = zerov
 var' ('-':xs) = 1 + var ('x':xs)
 var' x        = var ('x':x)
 
+
+var'P "0"      = (zerov,zerov)
+var'P ('-':xs) = (1 + x,x)
+                   where x = var ('x':xs)
+var'P xs       = (x,x)
+                   where x = var ('x':xs)    
+
 -------------------------------------------------------------------------------
 
 disj :: Num a => a -> a -> a
 disj x y = x + y + x*y
 
+
+disjP (x,v) (y,vs) | v == zerov = (y,vs)
+                   | otherwise   = (disj x y, S.insert v vs)
 -------------------------------------------------------------------------------

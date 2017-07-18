@@ -12,17 +12,17 @@ import Math.Algebras.TensorProduct
 import Math.Core.Utils (toSet)
 
 
-import qualified Data.Set as Set 
+import qualified Data.Set as S
 
 -------------------------------------------------------------------------
 
-[x1,x2,x3,x4] =
-  map var ["x1","x2","x3","x4"] :: [LexPoly F2 String]
+[x1,x2,x3,x4,x11] =
+  map var ["x1","x2","x3","x4","x11"] :: [LexPoly F2 String]
 
 example :: [LexPoly F2 String]
 example = [1,x1*x2+x1+x2,x1*x2+x1+1,x1*x2+1,x1*x2+x2+1]
 
-exampleSet = Set.fromList [1,x1*x2+x1+x2,x1*x2+x1+1,x1*x2+1,x1*x2+x2+1]
+exampleSet = S.fromList [1,x1*x2+x1+x2,x1*x2+x1+1,x1*x2+1,x1*x2+x2+1]
 
 -- monx :: Lex String
 -- --polx :: Vect F2 (Lex String)
@@ -39,8 +39,10 @@ ej2 :: Vect F2 (Lex String)
 -- --ej2 :: LexPoly F2 String
 ej2 = x4*x2^4+x1+x1^34*x2^12
 
+ej1 = x1*x2+x2*x3+x2+x4*x11+x11*x1*x2
+
 -- ej3 :: LexPoly F2 String
--- ej3 = ej1^1000
+ej3 = ej1^1001
 -- -- λ> deg ej3
 -- -- 2000
 -- -- (0.02 secs, 13,003,344 bytes)
