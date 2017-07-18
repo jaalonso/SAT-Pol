@@ -77,11 +77,20 @@ module Tool
 tool :: (Eq u, Show (m u), Show u, MonomialConstructor m, Algebra k (m u), Ord (m u), Ord k, Num k) => [Vect k (m u)] -> Bool
 
 -- | varsList xs return the set of variables which occurs in any polynomial
---   of the list xs. For example, the trivial case: &gt;&gt;&gt; let xs =
---   (take 10 (map (var . (n -&gt; <tt>x</tt>:n) . show) [1..])) ::
---   [LexPoly F2 String] &gt;&gt;&gt; xs [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]
---   &gt;&gt;&gt; varsList xs [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10] &gt;&gt;&gt;
---   varsList [x1*x2+x2,x1+x1*x3,x1*x4*x2] [x1,x2,x3,x4]
+--   of the list xs. For example, the trivial case:
+--   
+--   <pre>
+--   &gt;&gt;&gt; let xs = (take 10 (map (var . (\n -&gt; 'x':n) . show) [1..])) :: [LexPoly F2 String]
+--   
+--   &gt;&gt;&gt; xs
+--   [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]
+--   
+--   &gt;&gt;&gt; varsList xs
+--   [x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]
+--   
+--   &gt;&gt;&gt; varsList [x1*x2+x2,x1+x1*x3,x1*x4*x2]
+--   [x1,x2,x3,x4]
+--   </pre>
 varsList :: (Foldable t, Num k, MonomialConstructor m, Ord (m v), Ord k) => t (Vect k (m v)) -> [Vect k (m v)]
 
 
