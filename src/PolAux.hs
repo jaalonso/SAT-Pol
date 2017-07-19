@@ -5,16 +5,17 @@ module PolAux
       deriv,      
     ) where
 
-import Math.CommutativeAlgebra.Polynomial
-import Math.Core.Field (F2)
-import Math.Algebras.Structures
-import Math.Algebras.VectorSpace
-import Math.Algebras.TensorProduct
-import Math.Core.Utils (toSet)
+import Math.CommutativeAlgebra.Polynomial ( MonomialConstructor (..)
+                                          , lm
+                                          , mindices
+                                          , var
+                                          )
+import Math.Algebras.Structures           ( Algebra )
+import Math.Algebras.VectorSpace          ( Vect
+                                          , linear
+                                          )
+import Math.Core.Utils                    ( toSet )
 
-import Examples
-
--------------------------------------------------------------------------------
 
 -- | bind2 performs the clean function.
 bind2 :: (Eq k
