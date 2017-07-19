@@ -1,3 +1,9 @@
 #+TITLE: Satisfacibilidad mediante polinomios
 
+El objetivo del proyecto es desarrollar un sistema para decidir la
+satisfacibilidad de fórmulas proposicionales transformándola en polinomios y
+operando con dichos polinomios.
+
+Para la aritmética de polinomios se usa la librería [[https://hackage.haskell.org/package/HaskellForMaths][HaskellForMaths]].
+ 
 
